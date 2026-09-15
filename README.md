@@ -11,9 +11,9 @@ evaluation code, and every codec is rebuilt from its JSON config alone in CI.
 
 | Challenge | Constraint | Notebook default | **This repo** | Leaderboard |
 |---|---|---|---|---|
-| [01 Missing values](configs/01-nan-missing-values.json) | \|error\| ≤ 1 kg m⁻², NaNs preserved | ZFP ×8.0 (68.7% violations) | **×42.80** | [#47](https://github.com/climet-eu/compression-lab-notebooks/issues/47) |
-| [02 Relative error](configs/02-relative-error-bound.json) | \|error\| ≤ 1% of \|value\| | SZ3 ×142 (93.5% violations) | **×19.059** | [#48](https://github.com/climet-eu/compression-lab-notebooks/issues/48) |
-| [03 Spatial gradient](configs/03-spatial-gradient.json) | \|error of d/dlon\| ≤ 1e-6 | SPERR ×1051 (14.2% violations) | **×83.876** | [#49](https://github.com/climet-eu/compression-lab-notebooks/issues/49) |
+| [01 Missing values](configs/01-nan-missing-values.json) | \|error\| ≤ 1 kg m⁻², NaNs preserved | ZFP ×8.0 (68.7% violations) | **×42.80** |
+| [02 Relative error](configs/02-relative-error-bound.json) | \|error\| ≤ 1% of \|value\| | SZ3 ×142 (93.5% violations) | **×19.059** |
+| [03 Spatial gradient](configs/03-spatial-gradient.json) | \|error of d/dlon\| ≤ 1e-6 | SPERR ×1051 (14.2% violations) | **×83.876** | 
 
 ![Challenge 03 result](results/figures/03-spatial-gradient.png)
 
