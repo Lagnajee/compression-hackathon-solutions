@@ -6,11 +6,10 @@
       "eb_ratio": 1.01,
       "eb_abs_marker": "$eb_abs",
       "log_codec": {
-        "id": "fixedscaleoffset",
-        "scale": 34.83384183097051,
-        "offset": 0,
-        "dtype": "<f8",
-        "astype": "<i2"
+        "id": "sperr.rs",
+        "mode": "pwe",
+        "pwe": "$eb_abs",
+        "_version": "0.2.0"
       },
       "sign_codec": {
         "id": "zstd.rs",
@@ -20,22 +19,10 @@
     },
     {
       "id": "lzma",
-      "format": 3,
+      "format": 1,
       "check": -1,
-      "preset": null,
-      "filters": [
-        {
-          "id": 3,
-          "dist": 2
-        },
-        {
-          "id": 33,
-          "preset": 2147483657,
-          "lc": 1,
-          "lp": 1,
-          "pb": 1
-        }
-      ]
+      "preset": 2147483657,
+      "filters": null
     }
   ]
 }

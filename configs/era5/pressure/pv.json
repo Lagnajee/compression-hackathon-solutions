@@ -1,6 +1,119 @@
 {
-  "id": "sperr.rs",
-  "mode": "pwe",
-  "pwe": 1e-07,
-  "_version": "0.2.0"
+  "id": "combinators.stack",
+  "codecs": [
+    {
+      "id": "safeguards",
+      "codec": {
+        "id": "sperr.rs",
+        "mode": "q",
+        "q": 3e-07,
+        "_version": "0.2.0"
+      },
+      "safeguards": [
+        {
+          "kind": "any",
+          "safeguards": [
+            {
+              "kind": "all",
+              "safeguards": [
+                {
+                  "kind": "eb",
+                  "type": "abs",
+                  "eb": 1e-07,
+                  "equal_nan": false
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "safeguards": [
+                {
+                  "kind": "eb",
+                  "type": "rel",
+                  "eb": 0.1,
+                  "equal_nan": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "fixed_constants": {},
+      "lossless": {
+        "for_codec": null,
+        "for_corrections": {
+          "id": "combinators.best",
+          "codecs": [
+            {
+              "id": "combinators.stack",
+              "codecs": [
+                {
+                  "id": "tokenize"
+                },
+                {
+                  "id": "bitmap-index",
+                  "max_bitmaps": 1,
+                  "cost_factor": 1
+                },
+                {
+                  "id": "shuffle.typed-byte"
+                },
+                {
+                  "id": "combinators.framed",
+                  "codecs": [
+                    {
+                      "id": "zstd",
+                      "level": 3,
+                      "checksum": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "combinators.stack",
+              "codecs": [
+                {
+                  "id": "delta.binary"
+                },
+                {
+                  "id": "tokenize"
+                },
+                {
+                  "id": "bitmap-index",
+                  "max_bitmaps": 1,
+                  "cost_factor": 1
+                },
+                {
+                  "id": "shuffle.typed-byte"
+                },
+                {
+                  "id": "combinators.framed",
+                  "codecs": [
+                    {
+                      "id": "zstd",
+                      "level": 3,
+                      "checksum": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "compute": {
+        "unstable_iterative": false,
+        "unstable_lossless_corrections": false
+      },
+      "_version": "1.0.0"
+    },
+    {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+    }
+  ]
 }

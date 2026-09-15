@@ -1,17 +1,17 @@
 variable,best_cr,codec,baseline_cr,gain,requirements
-cc,48.886,Safeguarded(Zero),48.886,1.0,
-ciwc,65.385,PWRatio(FSO log2 i2 r=1.01)+LZMA,59.657,1.1,
-clwc,46.902,PWRatio(FSO log2 i2 r=1.01)+LZMA,46.14,1.02,
-crwc,58.549,Safeguarded(Zero),58.549,1.0,
-cswc,62.739,PWRatio(FSO log2 i2 r=1.01)+LZMA,56.034,1.12,
-d,13.506,PWRatio(FSO log2 i2 r=1.05)+LZMA,11.133,1.21,
-o3,58.002,PWRatio(FSO log2 i2 r=1.01)+LZMA,43.45,1.33,
-pv,47.139,Sperr pwe 1e-07,46.184,1.02,
-q,33.385,PWRatio(FSO log2 i2 r=1.01)+LZMA,25.933,1.29,
-r,28.417,PWRatio(FSO log2 i2 r=1.01)+LZMA,21.46,1.32,
-t,331.786,PWRatio(FSO log2 i2 r=1.01)+LZMA,222.131,1.49,
-u,118.513,Sperr pwe 0.5,50.049,2.37,
-v,121.272,Sperr pwe 0.5,46.149,2.63,
-vo,16.132,PWRatio(FSO log2 i2 r=1.05)+LZMA,13.291,1.21,
-w,34.555,Sperr pwe 0.01,20.573,1.68,
-z,126.688,Sperr pwe 10.0,31.134,4.07,
+cc,48.897,Safeguarded(Zero)+LZMA,48.886,1.0,"MaxPointwiseRelativeErrorBound(0.01); DataLimits(minimum=0.0, maximum=1.0)"
+ciwc,65.404,PWRatio(FSO log2 i2 r=1.01)+LZMA d2 lc3,59.657,1.1,MaxPointwiseRelativeErrorBound(0.01); DataLimits(minimum=0.0)
+clwc,46.921,PWRatio(FSO log2 i2 r=1.01)+LZMA d2 lc3,46.14,1.02,MaxPointwiseRelativeErrorBound(0.01); DataLimits(minimum=0.0)
+crwc,58.604,Safeguarded(Zero)+LZMA,58.549,1.0,MaxPointwiseRelativeErrorBound(0.01); DataLimits(minimum=0.0)
+cswc,62.739,PWRatio(FSO log2 i2 r=1.01)+LZMA,56.034,1.12,MaxPointwiseRelativeErrorBound(0.01); DataLimits(minimum=0.0)
+d,13.509,PWRatio(FSO log2 i2 r=1.05)+LZMA d2 lc0,11.133,1.21,MaxPointwiseRelativeErrorBound(0.05)
+o3,86.581,PWRatio(Sperr pwe r=1.01)+LZMA,43.45,1.99,MaxPointwiseRelativeErrorBound(0.01)
+pv,52.753,Safeguarded(Sperr q 3.0*1e-07)+LZMA,46.184,1.14,(MaxPointwiseAbsoluteErrorBound(1e-07) or MaxPointwiseRelativeErrorBound(0.1))
+q,38.615,PWRatio(Sperr pwe r=1.01)+LZMA,25.933,1.49,MaxPointwiseRelativeErrorBound(0.01)
+r,35.971,PWRatio(Sperr pwe r=1.01)+LZMA,21.46,1.68,MaxPointwiseRelativeErrorBound(0.01)
+t,787.739,PWRatio(Sperr pwe r=1.01)+LZMA,222.131,3.55,(MaxPointwiseAbsoluteErrorBound(0.05) or MaxPointwiseRelativeErrorBound(0.01))
+u,131.894,Safeguarded(Sperr pwe 1.5*0.5)+LZMA,50.049,2.64,MaxPointwiseAbsoluteErrorBound(0.5)
+v,135.898,Safeguarded(Sperr pwe 1.5*0.5)+LZMA,46.149,2.94,MaxPointwiseAbsoluteErrorBound(0.5)
+vo,16.138,PWRatio(FSO log2 i2 r=1.05)+LZMA d2 lc3,13.291,1.21,MaxPointwiseRelativeErrorBound(0.05)
+w,34.77,Sperr pwe 0.01+LZMA,20.573,1.69,(MaxPointwiseAbsoluteErrorBound(0.01) or MaxPointwiseRelativeErrorBound(0.05))
+z,132.182,Sperr pwe 10.0+LZMA,31.134,4.25,(MeanAbsoluteErrorBound(5.0) and MaxPointwiseAbsoluteErrorBound(10.0))

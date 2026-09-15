@@ -108,7 +108,7 @@ Reproduce or extend:
 ```shell
 uv run python verify_era5.py               # all exported variables (streams fields from S3, cached in data/era5)
 uv run python verify_era5.py single/2t     # one variable
-uv run python scripts/export_era5.py --pressure exploration/era5/log04.json --single exploration/era5/results05
+uv run python scripts/export_era5.py --pressure exploration/era5/log04.json exploration/era5/log04b.json --single exploration/era5/results05
 ```
 
 ## Repository layout

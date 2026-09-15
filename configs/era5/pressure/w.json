@@ -1,6 +1,18 @@
 {
-  "id": "sperr.rs",
-  "mode": "pwe",
-  "pwe": 0.01,
-  "_version": "0.2.0"
+  "id": "combinators.stack",
+  "codecs": [
+    {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.01,
+      "_version": "0.2.0"
+    },
+    {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+    }
+  ]
 }
