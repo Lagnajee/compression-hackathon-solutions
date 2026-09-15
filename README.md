@@ -26,10 +26,6 @@ uv run python verify.py            # rebuild codecs from configs/ and re-score
 uv run python solve.py             # rebuild codecs from source, rewrite configs/ and leaderboard/
 ```
 
-Leaderboard entries are collected in the Google Sheet linked from each
-challenge's GitHub issue. [`leaderboard/`](leaderboard/) holds a ready-to-copy
-row (ratio, version, full codec config) for each challenge.
-
 ## How each solution works
 
 ### 01 — Missing values (×42.80)
