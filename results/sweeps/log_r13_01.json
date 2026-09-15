@@ -1,0 +1,119 @@
+[
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc0 lp0 pb0)",
+  "cr": 42.613,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.8
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc0 lp0 pb2)",
+  "cr": 42.484,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.9
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc0 lp1 pb1)",
+  "cr": 42.475,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.9
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc1 lp0 pb0)",
+  "cr": 42.612,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.0
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc1 lp0 pb2)",
+  "cr": 42.496,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.6
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc1 lp1 pb1)",
+  "cr": 42.472,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.7
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc2 lp0 pb0)",
+  "cr": 42.612,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.8
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc2 lp0 pb2)",
+  "cr": 42.496,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.6
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc2 lp1 pb1)",
+  "cr": 42.472,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.8
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc3 lp0 pb0)",
+  "cr": 42.638,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.6
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc3 lp0 pb2)",
+  "cr": 42.512,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.6
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc3 lp1 pb1)",
+  "cr": 42.52,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.0
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc4 lp0 pb0)",
+  "cr": 42.802,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.5
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc4 lp0 pb2)",
+  "cr": 42.665,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.6
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round 2, Tokenize, raw LZMA lc4 lp1 pb1)",
+  "error": "LZMAError: Invalid or unsupported options"
+ }
+]

@@ -1,0 +1,194 @@
+[
+ {
+  "ch": "01",
+  "name": "Zfp tol1 allow-unsafe (notebook default)",
+  "cr": 7.998,
+  "viol": 0.6870315600198412,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 1.0 interpolation-lorenzo",
+  "cr": 16.983,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 1.0 interpolation",
+  "cr": 12.173,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 1.0 lorenzo",
+  "cr": 7.735,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 1.0 lorenzo-regression",
+  "cr": 7.742,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.999 interpolation-lorenzo",
+  "cr": 16.983,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.999 interpolation",
+  "cr": 12.173,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.999 lorenzo",
+  "cr": 7.735,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.999 lorenzo-regression",
+  "cr": 7.742,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.99 interpolation-lorenzo",
+  "cr": 16.958,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.99 interpolation",
+  "cr": 12.162,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.99 lorenzo",
+  "cr": 7.733,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Sz3 abs 0.99 lorenzo-regression",
+  "cr": 7.741,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "BitRound abs1 + Zstd19",
+  "cr": 24.311,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 7.5
+ },
+ {
+  "ch": "01",
+  "name": "Lc QUANT ABS f32 1 BIT RLE",
+  "cr": 3.839,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "01",
+  "name": "Mask+Zfp tol1",
+  "cr": 8.08,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask+Zfp tol2",
+  "cr": 9.516,
+  "viol": 3.1001984126984127e-07,
+  "ok": false,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask+Zfp tol3",
+  "cr": 9.516,
+  "viol": 3.1001984126984127e-07,
+  "ok": false,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask+Sperr pwe1",
+  "cr": 20.083,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask+Ebcc abs1",
+  "cr": 21.216,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 41.7
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Sz3 abs1) eb1",
+  "cr": 4.601,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.0
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Zfp tol2) eb1",
+  "cr": 4.963,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.4
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Zfp tol4) eb1",
+  "cr": 5.621,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.9
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Sperr pwe1.5) eb1",
+  "cr": 1.956,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 7.7
+ }
+]

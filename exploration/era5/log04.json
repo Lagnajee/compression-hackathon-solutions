@@ -1,0 +1,9068 @@
+[
+ {
+  "var": "ciwc",
+  "codec": "Safeguarded(Zero)",
+  "cr": 59.657,
+  "ok": true,
+  "sec": 16.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "ciwc",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 65.385,
+  "ok": true,
+  "sec": 1.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "ciwc",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 65.384,
+  "ok": true,
+  "sec": 3.3,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "ciwc",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 31.495,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "ciwc",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 31.495,
+  "ok": true,
+  "sec": 3.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "clwc",
+  "codec": "Safeguarded(Zero)",
+  "cr": 46.14,
+  "ok": true,
+  "sec": 17.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "clwc",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 46.902,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "clwc",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 46.901,
+  "ok": true,
+  "sec": 3.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "clwc",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 24.028,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "clwc",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 24.028,
+  "ok": true,
+  "sec": 2.3,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "crwc",
+  "codec": "Safeguarded(Zero)",
+  "cr": 58.549,
+  "ok": true,
+  "sec": 16.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "crwc",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 57.628,
+  "ok": true,
+  "sec": 1.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "crwc",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 57.628,
+  "ok": true,
+  "sec": 3.2,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "crwc",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 42.888,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "crwc",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 42.888,
+  "ok": true,
+  "sec": 2.3,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cc",
+  "codec": "Safeguarded(Zero)",
+  "cr": 48.886,
+  "ok": true,
+  "sec": 21.1,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x >= c[\"minimum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "minimum": 0.0
+         }
+        },
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x <= c[\"maximum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "maximum": 1.0
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cc",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 48.461,
+  "ok": true,
+  "sec": 2.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cc",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 48.461,
+  "ok": true,
+  "sec": 4.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x >= c[\"minimum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "minimum": 0.0
+         }
+        },
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x <= c[\"maximum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "maximum": 1.0
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cc",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 22.973,
+  "ok": false,
+  "sec": 0.8,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "cc",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 22.757,
+  "ok": true,
+  "sec": 16.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x >= c[\"minimum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "minimum": 0.0
+         }
+        },
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x <= c[\"maximum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "maximum": 1.0
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cswc",
+  "codec": "Safeguarded(Zero)",
+  "cr": 56.034,
+  "ok": true,
+  "sec": 12.1,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cswc",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 62.739,
+  "ok": true,
+  "sec": 2.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cswc",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 62.738,
+  "ok": true,
+  "sec": 3.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "cswc",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 34.532,
+  "ok": true,
+  "sec": 0.8,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "cswc",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 34.532,
+  "ok": true,
+  "sec": 2.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "qoi_eb_pw",
+       "qoi": "x >= c[\"minimum\"]",
+       "type": "abs",
+       "eb": 0,
+       "qoi_dtype": "lossless",
+       "early_bound": {
+        "minimum": 0.0
+       }
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "o3",
+  "codec": "Safeguarded(Zero)",
+  "cr": 43.45,
+  "ok": true,
+  "sec": 8.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "o3",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 58.002,
+  "ok": true,
+  "sec": 7.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "o3",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 58.002,
+  "ok": true,
+  "sec": 6.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "o3",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 43.373,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "o3",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 43.372,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "d",
+  "codec": "Safeguarded(Zero)",
+  "cr": 11.133,
+  "ok": true,
+  "sec": 9.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "d",
+  "codec": "PWRatio(FSO log2 i2 r=1.05)+LZMA",
+  "cr": 13.506,
+  "ok": true,
+  "sec": 11.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.05,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 7.104059947439975,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "d",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.05)+LZMA)",
+  "cr": 13.506,
+  "ok": true,
+  "sec": 7.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.05,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 7.104059947439975,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "d",
+  "codec": "PWRatio(Sz3 lorenzo r=1.05)",
+  "cr": 10.561,
+  "ok": true,
+  "sec": 1.2,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.05,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "d",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.05))",
+  "cr": 10.561,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.05,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "q",
+  "codec": "Safeguarded(Zero)",
+  "cr": 25.933,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "q",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 33.385,
+  "ok": true,
+  "sec": 6.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "q",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 33.385,
+  "ok": true,
+  "sec": 7.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "q",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 27.886,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "q",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 27.886,
+  "ok": true,
+  "sec": 2.6,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "r",
+  "codec": "Safeguarded(Zero)",
+  "cr": 21.46,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "r",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 28.417,
+  "ok": true,
+  "sec": 7.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "r",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 28.417,
+  "ok": true,
+  "sec": 11.6,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "r",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 24.405,
+  "ok": true,
+  "sec": 1.2,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "r",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 24.405,
+  "ok": true,
+  "sec": 3.2,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Safeguarded(Zero)",
+  "cr": 50.049,
+  "ok": true,
+  "sec": 7.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "FSO grid 2*0.5+LZMA",
+  "cr": 66.87,
+  "ok": true,
+  "sec": 3.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.000100010001,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Safeguarded(FSO grid 2*0.5+LZMA)",
+  "cr": 66.869,
+  "ok": true,
+  "sec": 5.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 1.000100010001,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Sz3 abs 0.5",
+  "cr": 59.636,
+  "ok": true,
+  "sec": 0.4,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 0.5,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Safeguarded(Sz3 abs 0.5)",
+  "cr": 59.635,
+  "ok": true,
+  "sec": 1.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 0.5,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Sperr pwe 0.5",
+  "cr": 118.513,
+  "ok": true,
+  "sec": 0.8,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 0.5,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "u",
+  "codec": "Safeguarded(Sperr pwe 0.5)",
+  "cr": 118.511,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 0.5,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Safeguarded(Zero)",
+  "cr": 46.149,
+  "ok": true,
+  "sec": 6.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "FSO grid 2*0.5+LZMA",
+  "cr": 66.558,
+  "ok": true,
+  "sec": 3.6,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.000100010001,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Safeguarded(FSO grid 2*0.5+LZMA)",
+  "cr": 66.558,
+  "ok": true,
+  "sec": 3.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 1.000100010001,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Sz3 abs 0.5",
+  "cr": 66.003,
+  "ok": true,
+  "sec": 0.4,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 0.5,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Safeguarded(Sz3 abs 0.5)",
+  "cr": 66.003,
+  "ok": true,
+  "sec": 1.3,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 0.5,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Sperr pwe 0.5",
+  "cr": 121.272,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 0.5,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "v",
+  "codec": "Safeguarded(Sperr pwe 0.5)",
+  "cr": 121.271,
+  "ok": true,
+  "sec": 1.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 0.5,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.5,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "vo",
+  "codec": "Safeguarded(Zero)",
+  "cr": 13.291,
+  "ok": true,
+  "sec": 8.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "vo",
+  "codec": "PWRatio(FSO log2 i2 r=1.05)+LZMA",
+  "cr": 16.132,
+  "ok": true,
+  "sec": 9.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.05,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 7.104059947439975,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "vo",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.05)+LZMA)",
+  "cr": 16.132,
+  "ok": true,
+  "sec": 14.2,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.05,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 7.104059947439975,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "vo",
+  "codec": "PWRatio(Sz3 lorenzo r=1.05)",
+  "cr": 12.435,
+  "ok": true,
+  "sec": 1.8,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.05,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "vo",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.05))",
+  "cr": 12.435,
+  "ok": true,
+  "sec": 3.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.05,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(Zero)",
+  "cr": 46.184,
+  "ok": true,
+  "sec": 17.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "PWRatio(FSO log2 i2 r=1.1)+LZMA",
+  "cr": 31.269,
+  "ok": true,
+  "sec": 5.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.1,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 3.636634112082065,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.1)+LZMA)",
+  "cr": 31.269,
+  "ok": true,
+  "sec": 7.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.1,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 3.636634112082065,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "PWRatio(Sz3 lorenzo r=1.1)",
+  "cr": 23.642,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.1,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.1))",
+  "cr": 23.642,
+  "ok": true,
+  "sec": 3.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.1,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "FSO grid 2*1e-07+LZMA",
+  "cr": 41.803,
+  "ok": true,
+  "sec": 9.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 5000500.050005001,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(FSO grid 2*1e-07+LZMA)",
+  "cr": 41.803,
+  "ok": true,
+  "sec": 8.2,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 5000500.050005001,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Sz3 abs 1e-07",
+  "cr": 27.26,
+  "ok": true,
+  "sec": 0.5,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 1e-07,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(Sz3 abs 1e-07)",
+  "cr": 27.26,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 1e-07,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Sperr pwe 1e-07",
+  "cr": 47.139,
+  "ok": true,
+  "sec": 1.0,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 1e-07,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "pv",
+  "codec": "Safeguarded(Sperr pwe 1e-07)",
+  "cr": 47.139,
+  "ok": true,
+  "sec": 3.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 1e-07,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 1e-07,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.1,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(Zero)",
+  "cr": 222.131,
+  "ok": true,
+  "sec": 10.6,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "PWRatio(FSO log2 i2 r=1.01)+LZMA",
+  "cr": 331.786,
+  "ok": true,
+  "sec": 3.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.01)+LZMA)",
+  "cr": 331.776,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.01,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 34.83384183097051,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "PWRatio(Sz3 lorenzo r=1.01)",
+  "cr": 218.721,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.01,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.01))",
+  "cr": 218.716,
+  "ok": true,
+  "sec": 2.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.01,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "FSO grid 2*0.05+LZMA",
+  "cr": 31.7,
+  "ok": true,
+  "sec": 7.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 10.00100010001,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(FSO grid 2*0.05+LZMA)",
+  "cr": 31.699,
+  "ok": true,
+  "sec": 9.6,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 10.00100010001,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Sz3 abs 0.05",
+  "cr": 24.144,
+  "ok": true,
+  "sec": 0.5,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 0.05,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(Sz3 abs 0.05)",
+  "cr": 24.144,
+  "ok": true,
+  "sec": 2.6,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 0.05,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Sperr pwe 0.05",
+  "cr": 45.161,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 0.05,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "t",
+  "codec": "Safeguarded(Sperr pwe 0.05)",
+  "cr": 45.161,
+  "ok": true,
+  "sec": 2.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 0.05,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(Zero)",
+  "cr": 20.573,
+  "ok": true,
+  "sec": 15.5,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "PWRatio(FSO log2 i2 r=1.05)+LZMA",
+  "cr": 14.313,
+  "ok": true,
+  "sec": 13.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.05,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 7.104059947439975,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(PWRatio(FSO log2 i2 r=1.05)+LZMA)",
+  "cr": 14.313,
+  "ok": true,
+  "sec": 15.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.05,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 7.104059947439975,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "PWRatio(Sz3 lorenzo r=1.05)",
+  "cr": 11.373,
+  "ok": true,
+  "sec": 1.5,
+  "config": {
+   "id": "pw_ratio",
+   "eb_ratio": 1.05,
+   "eb_abs_marker": "$eb_abs",
+   "log_codec": {
+    "id": "sz3.rs",
+    "predictor": "lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": "$eb_abs",
+    "_version": "0.2.0"
+   },
+   "sign_codec": {
+    "id": "zstd.rs",
+    "level": 19,
+    "_version": "0.1.0"
+   }
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(PWRatio(Sz3 lorenzo r=1.05))",
+  "cr": 11.373,
+  "ok": true,
+  "sec": 3.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "pw_ratio",
+    "eb_ratio": 1.05,
+    "eb_abs_marker": "$eb_abs",
+    "log_codec": {
+     "id": "sz3.rs",
+     "predictor": "lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": "$eb_abs",
+     "_version": "0.2.0"
+    },
+    "sign_codec": {
+     "id": "zstd.rs",
+     "level": 19,
+     "_version": "0.1.0"
+    }
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "FSO grid 2*0.01+LZMA",
+  "cr": 26.527,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 50.00500050005,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(FSO grid 2*0.01+LZMA)",
+  "cr": 26.527,
+  "ok": true,
+  "sec": 8.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 50.00500050005,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Sz3 abs 0.01",
+  "cr": 27.653,
+  "ok": true,
+  "sec": 0.5,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 0.01,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(Sz3 abs 0.01)",
+  "cr": 27.653,
+  "ok": true,
+  "sec": 1.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 0.01,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Sperr pwe 0.01",
+  "cr": 34.555,
+  "ok": true,
+  "sec": 1.0,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 0.01,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "w",
+  "codec": "Safeguarded(Sperr pwe 0.01)",
+  "cr": 34.555,
+  "ok": true,
+  "sec": 3.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 0.01,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.01,
+         "equal_nan": false
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "rel",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(Zero)",
+  "cr": 31.134,
+  "ok": true,
+  "sec": 17.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "FSO grid 2*10.0+LZMA",
+  "cr": 61.989,
+  "ok": true,
+  "sec": 8.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 0.05000500050005,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(FSO grid 2*10.0+LZMA)",
+  "cr": 20.842,
+  "ok": true,
+  "sec": 24.9,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.05000500050005,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Sz3 abs 10.0",
+  "cr": 40.938,
+  "ok": true,
+  "sec": 0.5,
+  "config": {
+   "id": "sz3.rs",
+   "predictor": "interpolation-lorenzo",
+   "eb_mode": "abs",
+   "eb_abs": 10.0,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(Sz3 abs 10.0)",
+  "cr": 22.178,
+  "ok": true,
+  "sec": 15.1,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sz3.rs",
+    "predictor": "interpolation-lorenzo",
+    "eb_mode": "abs",
+    "eb_abs": 10.0,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Sperr pwe 10.0",
+  "cr": 126.688,
+  "ok": true,
+  "sec": 0.9,
+  "config": {
+   "id": "sperr.rs",
+   "mode": "pwe",
+   "pwe": 10.0,
+   "_version": "0.2.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(Sperr pwe 10.0)",
+  "cr": 84.46,
+  "ok": true,
+  "sec": 15.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "sperr.rs",
+    "mode": "pwe",
+    "pwe": 10.0,
+    "_version": "0.2.0"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "FSO grid 2*9.0+LZMA",
+  "cr": 59.222,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 0.05556111166672222,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(FSO grid 2*9.0+LZMA)",
+  "cr": 23.511,
+  "ok": true,
+  "sec": 20.7,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.05556111166672222,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "z",
+  "codec": "FSO grid 2*8.0+LZMA",
+  "cr": 56.348,
+  "ok": true,
+  "sec": 6.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 0.0625062506250625,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "z",
+  "codec": "Safeguarded(FSO grid 2*8.0+LZMA)",
+  "cr": 24.197,
+  "ok": true,
+  "sec": 18.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.0625062506250625,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 5.0,
+          "equal_nan": false
+         }
+        },
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 10.0,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ }
+]

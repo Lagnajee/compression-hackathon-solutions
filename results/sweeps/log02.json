@@ -1,0 +1,98 @@
+[
+ {
+  "ch": "02",
+  "name": "Sz3 rel 0.01 (notebook default, range-rel)",
+  "cr": 142.051,
+  "viol": 0.9352312567421791,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "BitRound rel0.01 + Zstd19",
+  "cr": 9.617,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 9.5
+ },
+ {
+  "ch": "02",
+  "name": "Lc QUANT REL f64 0.01 BIT RLE",
+  "cr": 6.818,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 abs interpolation-lorenzo) 1.01",
+  "cr": 15.715,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 abs interpolation) 1.01",
+  "cr": 15.715,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 abs lorenzo) 1.01",
+  "cr": 18.062,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Zfp) 1.01",
+  "cr": 4.364,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sperr pwe) 1.01",
+  "cr": 14.067,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "02",
+  "name": "Safeguarded(Zero) rel0.01",
+  "cr": 13.252,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.6
+ },
+ {
+  "ch": "02",
+  "name": "Safeguarded(PWRatio Sz3 1.01) rel0.01",
+  "cr": 15.715,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "02",
+  "name": "Safeguarded(PWRatio Sz3 1.02) rel0.01",
+  "cr": 12.322,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.6
+ },
+ {
+  "ch": "02",
+  "name": "Safeguarded(PWRatio Sz3 1.05) rel0.01",
+  "cr": 11.667,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.7
+ }
+]

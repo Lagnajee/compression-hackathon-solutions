@@ -1,0 +1,5 @@
+variable,best_cr,codec,baseline_cr,gain,requirements
+100u,12.564,absq meanabs 0.01 eb=1.4v,8.404,1.5,MeanAbsoluteErrorBound(0.01)
+100v,14.281,absq meanabs 0.01 eb=2v,8.167,1.75,MeanAbsoluteErrorBound(0.01)
+wstar,33.782,absq meanabs 0.01 eb=2v,20.713,1.63,MeanAbsoluteErrorBound(0.01); DataLimits(minimum=0.0)
+z,23.634,absq pointwise 10,16.933,1.4,MaxPointwiseAbsoluteErrorBound(10.0)

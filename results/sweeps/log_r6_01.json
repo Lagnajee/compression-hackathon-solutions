@@ -1,0 +1,82 @@
+[
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc0 pb0",
+  "cr": 39.268,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc0 pb2",
+  "cr": 39.158,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc2 pb0",
+  "cr": 39.499,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.3
+ },
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc2 pb2",
+  "cr": 39.382,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc4 pb0",
+  "cr": 39.421,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask FSO u1 + lzma delta1 lc4 pb2",
+  "cr": 39.374,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_min) FSO u1 + lzma delta1 lc4 pb0",
+  "cr": 38.721,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_max) FSO u1 + lzma delta1 lc4 pb0",
+  "cr": 38.345,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=20.0) FSO u1 + lzma delta1 lc4 pb0",
+  "cr": 39.762,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=40.0) FSO u1 + lzma delta1 lc4 pb0",
+  "cr": 39.175,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.5
+ }
+]

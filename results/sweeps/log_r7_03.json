@@ -1,0 +1,26 @@
+[
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.000375) + lzma9e",
+  "cr": 83.802,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.5
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.0004) + lzma9e",
+  "cr": 83.871,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.2
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.000425) + lzma9e",
+  "cr": 83.876,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.0
+ }
+]

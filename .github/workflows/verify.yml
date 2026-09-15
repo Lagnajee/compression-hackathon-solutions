@@ -1,0 +1,59 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      era5:
+        description: "Also re-check every ERA5 variable (streams all fields from S3, slow)"
+        type: boolean
+        default: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Cache challenge data
+        uses: actions/cache@v4
+        with:
+          path: data
+          key: challenge-data-${{ hashFiles('scripts/SHA256SUMS', 'results/era5_expected.json') }}
+          restore-keys: challenge-data-
+
+      - name: Download challenge data
+        run: bash scripts/download_data.sh
+
+      - name: Challenges 01-03 (rebuild codecs from configs and re-score)
+        run: uv run python verify.py
+
+      - name: ERA5 sample (04/05)
+        if: hashFiles('results/era5_expected.json') != ''
+        run: uv run python verify_era5.py --sample 6
+
+  verify-era5-all:
+    if: github.event_name == 'workflow_dispatch' && inputs.era5
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Re-check every ERA5 variable
+        run: uv run python verify_era5.py

@@ -1,0 +1,218 @@
+[
+ {
+  "ch": "03",
+  "name": "Sperr psnr25 (notebook default)",
+  "cr": 1051.249,
+  "viol": 0.14248824934504545,
+  "ok": false,
+  "sec": 0.4
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.000178 interpolation-lorenzo",
+  "cr": 61.378,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.000178 interpolation",
+  "cr": 61.378,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.000178 lorenzo",
+  "cr": 48.45,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Zfp tol 0.000178",
+  "cr": 7.231,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Sperr pwe 0.000178",
+  "cr": 80.909,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "BitRound abs 0.000178 + Zstd19",
+  "cr": 25.734,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.7
+ },
+ {
+  "ch": "03",
+  "name": "Lc ABS 0.000178 BIT RLE",
+  "cr": 15.76,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.00017 interpolation-lorenzo",
+  "cr": 59.379,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.00017 interpolation",
+  "cr": 59.379,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Sz3 abs 0.00017 lorenzo",
+  "cr": 47.132,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Zfp tol 0.00017",
+  "cr": 7.231,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Sperr pwe 0.00017",
+  "cr": 77.619,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "BitRound abs 0.00017 + Zstd19",
+  "cr": 25.193,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.8
+ },
+ {
+  "ch": "03",
+  "name": "Lc ABS 0.00017 BIT RLE",
+  "cr": 15.709,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Zfp tol 0.00035 (unsafeguarded)",
+  "cr": 9.075,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Sperr pwe 0.00035 (unsafeguarded)",
+  "cr": 153.954,
+  "viol": 0.009592676067190631,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "Zfp tol 0.001 (unsafeguarded)",
+  "cr": 16.28,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Sperr pwe 0.001 (unsafeguarded)",
+  "cr": 472.841,
+  "viol": 0.07850834103868085,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Zero) stencil",
+  "cr": 44.251,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 14.2
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sz3 abs 0.000178) stencil",
+  "cr": 61.377,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sz3 abs 0.00035) stencil",
+  "cr": 32.919,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 17.1
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sz3 abs 0.0007) stencil",
+  "cr": 25.976,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 17.6
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr pwe 0.00035) stencil",
+  "cr": 80.857,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 10.1
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Zfp tol 0.00035) stencil",
+  "cr": 9.075,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr pwe 0.001) stencil",
+  "cr": 59.397,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 10.6
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Zfp tol 0.001) stencil",
+  "cr": 16.28,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ }
+]

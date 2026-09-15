@@ -1,0 +1,74 @@
+[
+ {
+  "ch": "03",
+  "name": "Framed(FSO step 3.574e-4 u1, lzma9e)",
+  "cr": 56.797,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO u1, Delta u1, lzma9e)",
+  "cr": 63.366,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO u1, bz2)",
+  "cr": 55.567,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.00025) stencil",
+  "cr": 76.318,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.8
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.0003) stencil",
+  "cr": 80.923,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.1
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.0004) stencil",
+  "cr": 83.497,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 11.6
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.00045) stencil",
+  "cr": 83.127,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.4
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.00055) stencil",
+  "cr": 81.023,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.7
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 3.5e-4) + lzma9e",
+  "cr": 83.378,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 13.2
+ }
+]

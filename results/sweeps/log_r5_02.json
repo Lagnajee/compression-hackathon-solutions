@@ -1,0 +1,87 @@
+[
+ {
+  "ch": "02",
+  "name": "ref: PW(FSO i2) + lzma delta2",
+  "cr": 18.838,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.9
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + raw lzma delta2 lc0 lp1 pb1",
+  "cr": 18.942,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.9
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + raw lzma delta2 lc1 lp1 pb1",
+  "cr": 19.059,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.7
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + raw lzma delta2 lc3 lp1 pb1",
+  "cr": 19.042,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.8
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + raw lzma delta2 lc0 lp0 pb0",
+  "cr": 18.606,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.2
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + raw lzma delta2 lc8 lp1 pb1",
+  "error": "LZMAError: Invalid or unsupported options"
+ },
+ {
+  "ch": "02",
+  "name": "PW(Stack(FSO i2, Delta i2)) + lzma9e",
+  "cr": 18.761,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.7
+ },
+ {
+  "ch": "02",
+  "name": "PW(Stack(FSO i2, Delta i2)) + lzma lc0 lp1 pb1",
+  "cr": 18.849,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.0
+ },
+ {
+  "ch": "02",
+  "name": "PW(Stack(FSO i2, Delta i2, Shuffle2)) + lzma9e",
+  "cr": 17.044,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.8
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2) + Shuffle? n/a -> lzma delta4",
+  "cr": 16.436,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.8
+ },
+ {
+  "ch": "02",
+  "name": "PW(FSO i2 offset half-step) + lzma delta2",
+  "cr": 18.836,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.3
+ }
+]

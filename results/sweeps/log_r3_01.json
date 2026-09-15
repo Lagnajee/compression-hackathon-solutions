@@ -1,0 +1,138 @@
+[
+ {
+  "ch": "01",
+  "name": "baseline Mask FSO u1 + lzma9e",
+  "cr": 38.966,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.8
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma9e (no container)",
+  "cr": 38.97,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.7
+ },
+ {
+  "ch": "01",
+  "name": "offset 0.5",
+  "cr": 38.926,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.6
+ },
+ {
+  "ch": "01",
+  "name": "offset 1.0",
+  "cr": 38.97,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.5
+ },
+ {
+  "ch": "01",
+  "name": "offset 1.5",
+  "cr": 38.947,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.9
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc0 pb0",
+  "cr": 38.965,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.2
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc0 pb2",
+  "cr": 38.927,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.5
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc1 pb0",
+  "cr": 38.965,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.2
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc1 pb2",
+  "cr": 38.927,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.3
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc2 pb0",
+  "cr": 38.965,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.4
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc2 pb2",
+  "cr": 38.927,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.2
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc4 pb0",
+  "cr": 39.185,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.4
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma lc4 pb2",
+  "cr": 39.097,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.4
+ },
+ {
+  "ch": "01",
+  "name": "raw lzma delta1",
+  "cr": 39.382,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.7
+ },
+ {
+  "ch": "01",
+  "name": "numcodecs Delta u1 + lzma9e",
+  "cr": 39.379,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.7
+ },
+ {
+  "ch": "01",
+  "name": "fill 0 raw lzma",
+  "cr": 38.628,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.6
+ },
+ {
+  "ch": "01",
+  "name": "bitmap raw lzma lc0",
+  "cr": 38.972,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.9
+ }
+]

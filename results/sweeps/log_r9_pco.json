@@ -1,0 +1,146 @@
+[
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco auto",
+  "cr": 33.395,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco consec1",
+  "cr": 33.395,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco consec2",
+  "cr": 24.383,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco lookback",
+  "cr": 33.385,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.2
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco conv1 o2",
+  "cr": 27.413,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill20) FSO u2 + Pco classic noop",
+  "cr": 13.628,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco auto))",
+  "cr": 14.823,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco consec1))",
+  "cr": 13.924,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco consec2))",
+  "cr": 14.485,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco lookback))",
+  "cr": 13.922,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco conv1 o2))",
+  "cr": 13.96,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Stack(FSO log2 i2, Pco classic noop))",
+  "cr": 7.81,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco auto)",
+  "cr": 64.635,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco consec1)",
+  "cr": 64.635,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco consec2)",
+  "cr": 46.739,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco lookback)",
+  "cr": 64.62,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco conv1 o2)",
+  "cr": 61.175,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "03",
+  "name": "Framed(FSO i2 step 3.5748e-4, Pco classic noop)",
+  "cr": 13.768,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ }
+]

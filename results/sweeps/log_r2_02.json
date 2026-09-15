@@ -1,0 +1,2073 @@
+[
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 interpolation) 1.01",
+  "cr": 15.715,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 interpolation) 1.0099",
+  "cr": 15.72,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 interpolation-lorenzo) 1.01",
+  "cr": 15.715,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 interpolation-lorenzo) 1.0099",
+  "cr": 15.72,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 regression) 1.01",
+  "cr": 11.13,
+  "viol": 0.0013869625520110957,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 regression) 1.0099",
+  "cr": 11.082,
+  "viol": 0.0013869625520110957,
+  "ok": false,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo2) 1.01",
+  "cr": 10.742,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo2) 1.0099",
+  "cr": 10.57,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo2-regression) 1.01",
+  "cr": 11.196,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo2-regression) 1.0099",
+  "cr": 11.164,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo) 1.01",
+  "cr": 18.062,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo) 1.0099",
+  "cr": 17.4,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo-regression) 1.01",
+  "cr": 15.851,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo-regression) 1.0099",
+  "cr": 15.831,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo-lorenzo2) 1.01",
+  "cr": 18.033,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo-lorenzo2) 1.0099",
+  "cr": 17.364,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo-lorenzo2-regression) 1.01",
+  "cr": 15.851,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Sz3 lorenzo-lorenzo2-regression) 1.0099",
+  "cr": 15.799,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(Ebcc abs) 1.01",
+  "error": "Exception: ebcc.rs codec's implementation raised an error"
+ },
+ {
+  "ch": "02",
+  "name": "AsType f4 + PWRatio(Ebcc abs) 1.0099",
+  "cr": 10.792,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 21.6
+ },
+ {
+  "ch": "02",
+  "name": "BitRound rel + lzma9e",
+  "error": "Exception: bit-round.rs codec's implementation raised an error"
+ },
+ {
+  "ch": "02",
+  "name": "Pressio pw_rel linear_quantizer bzip2",
+  "error": "Exception: pressio.rs codec's implementation raised an error"
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RLE1",
+  "cr": 1.641,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RLE8",
+  "cr": 1.162,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RRE1",
+  "cr": 2.714,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RRE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RZE1",
+  "cr": 4.081,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RZE8",
+  "cr": 1.027,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RARE1",
+  "cr": 2.713,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RARE8",
+  "cr": 5.636,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RAZE1",
+  "cr": 4.08,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 RAZE8",
+  "cr": 5.286,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 CLOG1",
+  "cr": 1.007,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 CLOG8",
+  "cr": 5.651,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 HCLOG1",
+  "cr": 1.01,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 HCLOG8",
+  "cr": 5.643,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RLE1",
+  "cr": 2.335,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RRE1",
+  "cr": 3.924,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RZE1",
+  "cr": 6.687,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RARE1",
+  "cr": 3.923,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RARE8",
+  "cr": 6.638,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RAZE1",
+  "cr": 6.684,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 RAZE8",
+  "cr": 6.872,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 CLOG1",
+  "cr": 1.125,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 CLOG8",
+  "cr": 7.829,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 HCLOG1",
+  "cr": 1.125,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 HCLOG8",
+  "cr": 7.814,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RLE1",
+  "cr": 2.328,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RRE1",
+  "cr": 3.874,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RZE1",
+  "cr": 6.544,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RARE1",
+  "cr": 3.874,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RARE8",
+  "cr": 6.489,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RAZE1",
+  "cr": 6.542,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 RAZE8",
+  "cr": 6.695,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 CLOG1",
+  "cr": 1.105,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 CLOG8",
+  "cr": 7.557,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 HCLOG1",
+  "cr": 1.107,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 HCLOG8",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RLE1",
+  "cr": 1.641,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RLE8",
+  "cr": 1.162,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RRE1",
+  "cr": 2.714,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RRE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RZE1",
+  "cr": 4.081,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RZE8",
+  "cr": 1.027,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RARE1",
+  "cr": 2.713,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RARE8",
+  "cr": 5.189,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RAZE1",
+  "cr": 4.08,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 RAZE8",
+  "cr": 4.884,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 CLOG1",
+  "cr": 1.004,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 CLOG8",
+  "cr": 5.194,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 HCLOG1",
+  "cr": 1.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 HCLOG8",
+  "cr": 5.187,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RLE1",
+  "cr": 7.313,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RLE8",
+  "cr": 6.818,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RRE1",
+  "cr": 8.058,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RRE8",
+  "cr": 6.883,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RZE1",
+  "cr": 6.123,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RZE8",
+  "cr": 5.8,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RARE1",
+  "cr": 8.054,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RARE8",
+  "cr": 6.88,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RAZE1",
+  "cr": 6.121,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 RAZE8",
+  "cr": 5.798,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 CLOG1",
+  "cr": 4.973,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 CLOG8",
+  "cr": 4.979,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 HCLOG1",
+  "cr": 5.52,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 HCLOG8",
+  "cr": 5.63,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RLE1",
+  "cr": 2.425,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RLE8",
+  "cr": 1.125,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RRE1",
+  "cr": 3.754,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RRE8",
+  "cr": 1.13,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RZE1",
+  "cr": 6.001,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RZE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RARE1",
+  "cr": 3.753,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RARE8",
+  "cr": 6.01,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RAZE1",
+  "cr": 5.999,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 RAZE8",
+  "cr": 6.266,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 CLOG1",
+  "cr": 1.074,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 CLOG8",
+  "cr": 6.969,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 HCLOG1",
+  "cr": 1.074,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 DIFFNB8 HCLOG8",
+  "cr": 6.957,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RLE1",
+  "cr": 2.291,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RRE1",
+  "cr": 3.667,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RZE1",
+  "cr": 5.973,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RARE1",
+  "cr": 3.666,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RARE8",
+  "cr": 6.026,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RAZE1",
+  "cr": 5.971,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 RAZE8",
+  "cr": 6.219,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 CLOG1",
+  "cr": 1.065,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 CLOG8",
+  "cr": 6.98,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 HCLOG1",
+  "cr": 1.065,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 TCMS8 HCLOG8",
+  "cr": 6.968,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RLE1",
+  "cr": 7.949,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RLE8",
+  "cr": 7.303,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RRE1",
+  "cr": 8.531,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RRE8",
+  "cr": 7.384,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RZE1",
+  "cr": 9.106,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RZE8",
+  "cr": 7.95,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RARE1",
+  "cr": 8.527,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RARE8",
+  "cr": 7.381,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RAZE1",
+  "cr": 9.1,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 RAZE8",
+  "cr": 7.947,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 CLOG1",
+  "cr": 4.924,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 CLOG8",
+  "cr": 4.933,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 HCLOG1",
+  "cr": 4.918,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFMS8 BIT8 HCLOG8",
+  "cr": 4.927,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RLE1",
+  "cr": 2.395,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RLE8",
+  "cr": 1.113,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RRE1",
+  "cr": 3.634,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RRE8",
+  "cr": 1.115,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RZE1",
+  "cr": 5.699,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RZE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RARE1",
+  "cr": 3.633,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RARE8",
+  "cr": 5.842,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RAZE1",
+  "cr": 5.697,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 RAZE8",
+  "cr": 5.944,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 CLOG1",
+  "cr": 1.058,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 CLOG8",
+  "cr": 6.759,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 HCLOG1",
+  "cr": 1.058,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 DIFFMS8 HCLOG8",
+  "cr": 6.748,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RLE1",
+  "cr": 2.276,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RRE1",
+  "cr": 3.603,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RZE1",
+  "cr": 5.804,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RARE1",
+  "cr": 3.602,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RARE8",
+  "cr": 5.903,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RAZE1",
+  "cr": 5.802,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 RAZE8",
+  "cr": 6.074,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 CLOG1",
+  "cr": 1.058,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 CLOG8",
+  "cr": 6.763,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 HCLOG1",
+  "cr": 1.059,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 TCMS8 HCLOG8",
+  "cr": 6.752,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RLE1",
+  "cr": 9.802,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RLE8",
+  "cr": 8.599,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RRE1",
+  "cr": 10.591,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RRE8",
+  "cr": 8.71,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RZE1",
+  "cr": 11.476,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RZE8",
+  "cr": 9.646,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RARE1",
+  "cr": 10.584,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RARE8",
+  "cr": 8.706,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RAZE1",
+  "cr": 11.468,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 RAZE8",
+  "cr": 9.64,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 CLOG1",
+  "cr": 4.731,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 CLOG8",
+  "cr": 4.738,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 HCLOG1",
+  "cr": 4.727,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 DIFFNB8 BIT8 HCLOG8",
+  "cr": 4.733,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RLE1",
+  "cr": 2.291,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RRE1",
+  "cr": 3.667,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RZE1",
+  "cr": 5.973,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RARE1",
+  "cr": 3.666,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RARE8",
+  "cr": 6.026,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RAZE1",
+  "cr": 5.971,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 RAZE8",
+  "cr": 6.219,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 CLOG1",
+  "cr": 1.065,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 CLOG8",
+  "cr": 6.98,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 HCLOG1",
+  "cr": 1.065,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFMS8 HCLOG8",
+  "cr": 6.968,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RLE1",
+  "cr": 2.275,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RLE8",
+  "cr": 1.215,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RRE1",
+  "cr": 3.596,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RRE8",
+  "cr": 1.234,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RZE1",
+  "cr": 5.788,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RZE8",
+  "cr": 1.171,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RARE1",
+  "cr": 3.596,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RARE8",
+  "cr": 5.906,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RAZE1",
+  "cr": 5.786,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 RAZE8",
+  "cr": 6.069,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 CLOG1",
+  "cr": 1.059,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 CLOG8",
+  "cr": 6.764,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 HCLOG1",
+  "cr": 1.06,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 DIFFNB8 HCLOG8",
+  "cr": 6.753,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RLE1",
+  "cr": 7.307,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RLE8",
+  "cr": 6.791,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RRE1",
+  "cr": 8.036,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RRE8",
+  "cr": 6.853,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RZE1",
+  "cr": 6.114,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RZE8",
+  "cr": 5.795,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RARE1",
+  "cr": 8.032,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RARE8",
+  "cr": 6.85,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RAZE1",
+  "cr": 6.112,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 RAZE8",
+  "cr": 5.793,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 CLOG1",
+  "cr": 4.54,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.3
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 CLOG8",
+  "cr": 4.551,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 HCLOG1",
+  "cr": 4.985,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 TCMS8 BIT8 HCLOG8",
+  "cr": 5.082,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RLE1",
+  "cr": 6.716,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RLE8",
+  "cr": 6.574,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RRE1",
+  "cr": 7.291,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RRE8",
+  "cr": 6.626,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RZE1",
+  "cr": 7.345,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RZE8",
+  "cr": 6.883,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RARE1",
+  "cr": 7.288,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RARE8",
+  "cr": 6.623,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RAZE1",
+  "cr": 7.341,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 RAZE8",
+  "cr": 6.88,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 CLOG1",
+  "cr": 4.993,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 CLOG8",
+  "cr": 5.048,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 HCLOG1",
+  "cr": 5.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFMS8 HCLOG8",
+  "cr": 5.057,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RLE1",
+  "cr": 6.75,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RLE8",
+  "cr": 6.574,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RRE1",
+  "cr": 7.283,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RRE8",
+  "cr": 6.626,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RZE1",
+  "cr": 7.834,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RZE8",
+  "cr": 6.883,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RARE1",
+  "cr": 7.28,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RARE8",
+  "cr": 6.623,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RAZE1",
+  "cr": 7.831,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 RAZE8",
+  "cr": 6.88,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 CLOG1",
+  "cr": 5.004,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 CLOG8",
+  "cr": 5.042,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 HCLOG1",
+  "cr": 4.998,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 DIFFNB8 HCLOG8",
+  "cr": 5.042,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RLE1",
+  "cr": 6.428,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RLE8",
+  "cr": 6.818,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RRE1",
+  "cr": 7.438,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RRE8",
+  "cr": 6.883,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RZE1",
+  "cr": 7.741,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RZE8",
+  "cr": 5.8,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RARE1",
+  "cr": 7.435,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RARE8",
+  "cr": 6.88,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.1
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RAZE1",
+  "cr": 7.737,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 RAZE8",
+  "cr": 6.713,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 CLOG1",
+  "cr": 5.493,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 CLOG8",
+  "cr": 5.634,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 HCLOG1",
+  "cr": 5.521,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ },
+ {
+  "ch": "02",
+  "name": "LC REL0.01 BIT8 TCMS8 HCLOG8",
+  "cr": 5.644,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.2
+ }
+]

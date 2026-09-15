@@ -1,0 +1,88 @@
+[
+ {
+  "ch": "03",
+  "name": "Sperr pwe 1.7875e-4 + lzma9e",
+  "cr": 81.775,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.000357 u1 + lzma9e",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.000357 u1 + bz2",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.000357 u1 + Delta + lzma9e",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.0003574 u1 + lzma9e",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.0003574 u1 + bz2",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "FSO step 0.0003574 u1 + Delta + lzma9e",
+  "error": "ValueError: Data shape (2076480,) must match shape of object (2, 721, 1440)"
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr pwe 0.0002) stencil",
+  "cr": 80.967,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 15.7
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr pwe 0.00023) stencil",
+  "cr": 81.658,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.3
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr pwe 0.00026) stencil",
+  "cr": 82.085,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.4
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.00035) stencil",
+  "cr": 83.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 11.6
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.0007) stencil",
+  "cr": 76.513,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 12.8
+ },
+ {
+  "ch": "03",
+  "name": "Safeguarded(Sperr q 0.0014) stencil",
+  "cr": 60.882,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 14.0
+ }
+]

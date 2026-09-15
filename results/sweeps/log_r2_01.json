@@ -1,0 +1,3071 @@
+[
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=zstd19) FSO step2 u1 + zstd22",
+  "cr": 36.271,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=zstd19) FSO step2 u1 + lzma9e",
+  "cr": 38.514,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=zstd19) FSO step2 u1 + bz2",
+  "cr": 38.488,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=zstd19) FSO step2 u1 + lc DIFFMS1 RZE1",
+  "cr": 19.725,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=lzma9e) FSO step2 u1 + zstd22",
+  "cr": 36.672,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=lzma9e) FSO step2 u1 + lzma9e",
+  "cr": 38.966,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=lzma9e) FSO step2 u1 + bz2",
+  "cr": 38.939,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=finite_mean,bm=lzma9e) FSO step2 u1 + lc DIFFMS1 RZE1",
+  "cr": 19.843,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=zstd19) FSO step2 u1 + zstd22",
+  "cr": 36.021,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=zstd19) FSO step2 u1 + lzma9e",
+  "cr": 38.181,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.2
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=zstd19) FSO step2 u1 + bz2",
+  "cr": 38.221,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=zstd19) FSO step2 u1 + lc DIFFMS1 RZE1",
+  "cr": 19.649,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=lzma9e) FSO step2 u1 + zstd22",
+  "cr": 36.416,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.2
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=lzma9e) FSO step2 u1 + lzma9e",
+  "cr": 38.625,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.3
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=lzma9e) FSO step2 u1 + bz2",
+  "cr": 38.666,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "01",
+  "name": "Mask(fill=0.0,bm=lzma9e) FSO step2 u1 + lc DIFFMS1 RZE1",
+  "cr": 19.766,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "01",
+  "name": "Mask Sz3 abs1 interp-lorenzo",
+  "cr": 30.332,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask Sz3 abs1 interp-lorenzo fill0",
+  "cr": 26.569,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask BitRound abs1 + zstd22",
+  "cr": 23.462,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 16.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask BitRound abs1 + lzma9e",
+  "error": "Exception: bit-round.rs codec's implementation raised an error"
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RLE1",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RLE4",
+  "cr": 6.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RRE1",
+  "cr": 1.986,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RRE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RZE1",
+  "cr": 3.943,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RZE4",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RARE1",
+  "cr": 1.985,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RARE4",
+  "cr": 7.549,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RAZE1",
+  "cr": 3.942,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 RAZE4",
+  "cr": 5.54,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 CLOG1",
+  "cr": 1.45,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 CLOG4",
+  "cr": 5.685,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 HCLOG1",
+  "cr": 1.45,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 HCLOG4",
+  "cr": 5.677,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RZE1",
+  "cr": 13.592,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RARE1",
+  "cr": 9.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RARE4",
+  "cr": 7.241,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RAZE1",
+  "cr": 13.58,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.3
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 RAZE4",
+  "cr": 8.706,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 CLOG1",
+  "cr": 1.921,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 CLOG4",
+  "cr": 7.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 HCLOG1",
+  "cr": 1.92,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 HCLOG4",
+  "cr": 7.468,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RZE1",
+  "cr": 13.592,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RARE1",
+  "cr": 9.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RARE4",
+  "cr": 7.195,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RAZE1",
+  "cr": 13.58,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 RAZE4",
+  "cr": 8.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 CLOG1",
+  "cr": 1.837,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 CLOG4",
+  "cr": 7.163,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 HCLOG1",
+  "cr": 1.837,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 HCLOG4",
+  "cr": 7.151,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RLE1",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RLE4",
+  "cr": 6.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RRE1",
+  "cr": 1.986,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RRE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RZE1",
+  "cr": 3.943,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RZE4",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RARE1",
+  "cr": 1.985,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RARE4",
+  "cr": 6.993,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RAZE1",
+  "cr": 3.942,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 RAZE4",
+  "cr": 4.725,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 CLOG1",
+  "cr": 1.228,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 CLOG4",
+  "cr": 4.827,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 HCLOG1",
+  "cr": 1.227,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 HCLOG4",
+  "cr": 4.822,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RLE1",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RLE4",
+  "cr": 6.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RRE1",
+  "cr": 1.986,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RRE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RZE1",
+  "cr": 3.943,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RZE4",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RARE1",
+  "cr": 1.985,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RARE4",
+  "cr": 7.554,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RAZE1",
+  "cr": 3.942,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 RAZE4",
+  "cr": 4.506,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 CLOG1",
+  "cr": 1.141,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.3
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 CLOG4",
+  "cr": 4.491,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 HCLOG1",
+  "cr": 1.14,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 HCLOG4",
+  "cr": 4.486,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RLE1",
+  "cr": 12.275,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RLE4",
+  "cr": 11.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RRE1",
+  "cr": 14.756,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RRE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RZE1",
+  "cr": 8.581,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RZE4",
+  "cr": 8.282,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RARE1",
+  "cr": 14.743,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RARE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RAZE1",
+  "cr": 8.577,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 RAZE4",
+  "cr": 8.278,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 CLOG1",
+  "cr": 6.387,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 CLOG4",
+  "cr": 6.386,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 HCLOG1",
+  "cr": 6.642,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 HCLOG4",
+  "cr": 6.684,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RLE1",
+  "cr": 5.385,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RLE4",
+  "cr": 3.828,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RRE1",
+  "cr": 7.481,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RRE4",
+  "cr": 3.884,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RZE1",
+  "cr": 11.225,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RZE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RARE1",
+  "cr": 7.478,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RARE4",
+  "cr": 5.657,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RAZE1",
+  "cr": 11.218,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 RAZE4",
+  "cr": 6.474,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 CLOG1",
+  "cr": 1.524,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 CLOG4",
+  "cr": 5.962,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 HCLOG1",
+  "cr": 1.523,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 DIFFNB4 HCLOG4",
+  "cr": 5.954,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RZE1",
+  "cr": 13.592,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RARE1",
+  "cr": 9.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RARE4",
+  "cr": 6.276,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RAZE1",
+  "cr": 13.58,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 RAZE4",
+  "cr": 7.534,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 CLOG1",
+  "cr": 1.627,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 CLOG4",
+  "cr": 6.362,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 HCLOG1",
+  "cr": 1.626,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCMS4 HCLOG4",
+  "cr": 6.352,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RLE1",
+  "cr": 7.542,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RRE1",
+  "cr": 9.534,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RZE1",
+  "cr": 13.589,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RARE1",
+  "cr": 9.529,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RARE4",
+  "cr": 6.84,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RAZE1",
+  "cr": 13.578,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 RAZE4",
+  "cr": 8.31,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 CLOG1",
+  "cr": 1.647,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 CLOG4",
+  "cr": 6.432,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 HCLOG1",
+  "cr": 1.647,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 TCNB4 HCLOG4",
+  "cr": 6.422,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RLE1",
+  "cr": 11.857,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RLE4",
+  "cr": 9.641,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RRE1",
+  "cr": 14.068,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RRE4",
+  "cr": 10.114,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RZE1",
+  "cr": 18.432,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RZE4",
+  "cr": 13.121,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RARE1",
+  "cr": 14.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RARE4",
+  "cr": 10.108,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RAZE1",
+  "cr": 18.411,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 RAZE4",
+  "cr": 13.11,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 CLOG1",
+  "cr": 5.136,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 CLOG4",
+  "cr": 5.138,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 HCLOG1",
+  "cr": 5.129,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFMS4 BIT4 HCLOG4",
+  "cr": 5.132,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RLE1",
+  "cr": 5.385,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RLE4",
+  "cr": 3.826,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RRE1",
+  "cr": 7.481,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RRE4",
+  "cr": 3.879,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RZE1",
+  "cr": 11.225,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RZE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RARE1",
+  "cr": 7.478,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RARE4",
+  "cr": 5.933,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RAZE1",
+  "cr": 11.218,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 RAZE4",
+  "cr": 6.32,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 CLOG1",
+  "cr": 1.564,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 CLOG4",
+  "cr": 6.118,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 HCLOG1",
+  "cr": 1.573,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 DIFFMS4 HCLOG4",
+  "cr": 6.109,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RZE1",
+  "cr": 13.591,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RARE1",
+  "cr": 9.529,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RARE4",
+  "cr": 6.246,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RAZE1",
+  "cr": 13.579,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 RAZE4",
+  "cr": 7.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 CLOG1",
+  "cr": 1.567,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 CLOG4",
+  "cr": 6.13,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 HCLOG1",
+  "cr": 1.577,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCMS4 HCLOG4",
+  "cr": 6.121,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RLE1",
+  "cr": 7.5,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RRE1",
+  "cr": 9.449,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RZE1",
+  "cr": 13.416,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RARE1",
+  "cr": 9.443,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RARE4",
+  "cr": 6.147,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RAZE1",
+  "cr": 13.405,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 RAZE4",
+  "cr": 7.249,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 CLOG1",
+  "cr": 1.514,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 CLOG4",
+  "cr": 5.708,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 HCLOG1",
+  "cr": 1.513,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 TCNB4 HCLOG4",
+  "cr": 5.7,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RLE1",
+  "cr": 13.693,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RLE4",
+  "cr": 10.905,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RRE1",
+  "cr": 16.295,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RRE4",
+  "cr": 11.457,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RZE1",
+  "cr": 21.111,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RZE4",
+  "cr": 15.117,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RARE1",
+  "cr": 16.279,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RARE4",
+  "cr": 11.449,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RAZE1",
+  "cr": 21.084,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 RAZE4",
+  "cr": 15.103,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 CLOG1",
+  "cr": 5.36,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 CLOG4",
+  "cr": 5.359,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 HCLOG1",
+  "cr": 5.353,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 DIFFNB4 BIT4 HCLOG4",
+  "cr": 5.352,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RZE1",
+  "cr": 13.592,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RARE1",
+  "cr": 9.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RARE4",
+  "cr": 6.276,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RAZE1",
+  "cr": 13.58,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 RAZE4",
+  "cr": 7.534,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 CLOG1",
+  "cr": 1.627,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 CLOG4",
+  "cr": 6.362,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 HCLOG1",
+  "cr": 1.626,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFMS4 HCLOG4",
+  "cr": 6.352,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RLE1",
+  "cr": 7.542,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RLE4",
+  "cr": 4.703,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RRE4",
+  "cr": 5.045,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RZE1",
+  "cr": 13.59,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RARE1",
+  "cr": 9.529,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RARE4",
+  "cr": 6.248,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RAZE1",
+  "cr": 13.579,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 RAZE4",
+  "cr": 7.534,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 CLOG1",
+  "cr": 1.574,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 CLOG4",
+  "cr": 6.155,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 HCLOG1",
+  "cr": 1.577,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 DIFFNB4 HCLOG4",
+  "cr": 6.145,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RLE1",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RLE4",
+  "cr": 6.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RRE1",
+  "cr": 1.905,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RRE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RZE1",
+  "cr": 3.636,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RZE4",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RARE1",
+  "cr": 1.916,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RARE4",
+  "cr": 7.02,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RAZE1",
+  "cr": 3.635,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 RAZE4",
+  "cr": 4.079,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 CLOG1",
+  "cr": 1.095,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 CLOG4",
+  "cr": 4.162,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 HCLOG1",
+  "cr": 1.095,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 TCNB4 HCLOG4",
+  "cr": 4.157,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RLE1",
+  "cr": 12.275,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RLE4",
+  "cr": 11.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RRE1",
+  "cr": 14.743,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RRE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RZE1",
+  "cr": 8.577,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RZE4",
+  "cr": 8.282,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RARE1",
+  "cr": 14.73,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RARE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RAZE1",
+  "cr": 8.572,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 RAZE4",
+  "cr": 8.278,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 CLOG1",
+  "cr": 6.387,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 CLOG4",
+  "cr": 6.386,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 HCLOG1",
+  "cr": 6.642,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCMS4 BIT4 HCLOG4",
+  "cr": 6.684,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RLE1",
+  "cr": 7.543,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RLE4",
+  "cr": 4.449,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RRE1",
+  "cr": 9.535,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RRE4",
+  "cr": 4.611,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RZE1",
+  "cr": 13.592,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RARE1",
+  "cr": 9.53,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RARE4",
+  "cr": 5.692,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RAZE1",
+  "cr": 13.58,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 RAZE4",
+  "cr": 7.062,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 CLOG1",
+  "cr": 1.444,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 CLOG4",
+  "cr": 5.661,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 HCLOG1",
+  "cr": 1.448,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFMS4 HCLOG4",
+  "cr": 5.653,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RLE1",
+  "cr": 7.468,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RLE4",
+  "cr": 4.449,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RRE1",
+  "cr": 9.381,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RRE4",
+  "cr": 4.611,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RZE1",
+  "cr": 13.279,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RZE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RARE1",
+  "cr": 9.375,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RARE4",
+  "cr": 5.502,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RAZE1",
+  "cr": 13.268,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 RAZE4",
+  "cr": 7.0,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 CLOG1",
+  "cr": 1.408,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 CLOG4",
+  "cr": 5.199,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 HCLOG1",
+  "cr": 1.424,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 DIFFNB4 HCLOG4",
+  "cr": 5.192,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RLE1",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RLE4",
+  "cr": 6.056,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RRE1",
+  "cr": 1.986,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RRE4",
+  "cr": 6.901,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RZE1",
+  "cr": 3.943,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RZE4",
+  "cr": 0.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RARE1",
+  "cr": 1.985,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RARE4",
+  "cr": 6.997,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RAZE1",
+  "cr": 3.942,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 RAZE4",
+  "cr": 3.949,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 CLOG1",
+  "cr": 0.999,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 CLOG4",
+  "cr": 3.938,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 HCLOG1",
+  "cr": 1.109,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 TCMS4 HCLOG4",
+  "cr": 3.934,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RLE1",
+  "cr": 10.609,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RLE4",
+  "cr": 9.44,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RRE1",
+  "cr": 12.847,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RRE4",
+  "cr": 9.842,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RZE1",
+  "cr": 5.937,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RZE4",
+  "cr": 5.846,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RARE1",
+  "cr": 12.837,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RARE4",
+  "cr": 9.836,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RAZE1",
+  "cr": 5.935,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 RAZE4",
+  "cr": 5.844,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 CLOG1",
+  "cr": 5.28,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 CLOG4",
+  "cr": 5.267,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 HCLOG1",
+  "cr": 5.762,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 TCNB4 BIT4 HCLOG4",
+  "cr": 5.826,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RLE1",
+  "cr": 9.999,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RLE4",
+  "cr": 9.683,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RRE1",
+  "cr": 11.33,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RRE4",
+  "cr": 9.931,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RZE1",
+  "cr": 12.567,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RZE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RARE1",
+  "cr": 11.323,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RARE4",
+  "cr": 9.925,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RAZE1",
+  "cr": 12.558,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 RAZE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 CLOG1",
+  "cr": 5.883,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 CLOG4",
+  "cr": 6.158,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 HCLOG1",
+  "cr": 5.938,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFMS4 HCLOG4",
+  "cr": 6.173,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RLE1",
+  "cr": 10.076,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RLE4",
+  "cr": 9.683,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RRE1",
+  "cr": 11.326,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RRE4",
+  "cr": 9.931,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RZE1",
+  "cr": 13.686,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RZE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.6
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RARE1",
+  "cr": 11.318,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RARE4",
+  "cr": 9.925,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RAZE1",
+  "cr": 13.675,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 RAZE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 CLOG1",
+  "cr": 5.99,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 CLOG4",
+  "cr": 6.163,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 HCLOG1",
+  "cr": 5.989,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 DIFFNB4 HCLOG4",
+  "cr": 6.157,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RLE1",
+  "cr": 7.581,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RLE4",
+  "cr": 11.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RRE1",
+  "cr": 10.409,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RRE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RZE1",
+  "cr": 13.271,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RZE4",
+  "cr": 8.282,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RARE1",
+  "cr": 10.402,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RARE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RAZE1",
+  "cr": 13.26,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 RAZE4",
+  "cr": 10.197,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 CLOG1",
+  "cr": 6.624,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 CLOG4",
+  "cr": 6.684,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 HCLOG1",
+  "cr": 6.634,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCMS4 HCLOG4",
+  "cr": 6.697,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RLE1",
+  "cr": 7.672,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RLE4",
+  "cr": 11.006,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RRE1",
+  "cr": 10.408,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RRE4",
+  "cr": 11.49,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RZE1",
+  "cr": 14.421,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RZE4",
+  "cr": 8.282,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RARE1",
+  "cr": 10.401,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RARE4",
+  "cr": 11.482,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RAZE1",
+  "cr": 14.408,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 RAZE4",
+  "cr": 8.624,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 CLOG1",
+  "cr": 6.594,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 CLOG4",
+  "cr": 6.67,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.7
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 HCLOG1",
+  "cr": 6.586,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.8
+ },
+ {
+  "ch": "01",
+  "name": "Mask LC ABS1 BIT4 TCNB4 HCLOG4",
+  "cr": 6.662,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ }
+]

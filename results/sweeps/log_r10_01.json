@@ -1,0 +1,27 @@
+[
+ {
+  "ch": "01",
+  "name": "Safeguarded(Replace nan->20.0, FSO <u1, LZMA) eb1",
+  "error": "RuntimeError: codec: codec must decode to the data's shape"
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Replace nan->0.0, FSO <u1, LZMA) eb1",
+  "error": "RuntimeError: codec: codec must decode to the data's shape"
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Replace nan->-2.0, FSO <i1, LZMA) eb1",
+  "error": "RuntimeError: codec: codec must decode to the data's shape"
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Replace nan->-178.0, FSO <i1, LZMA) eb1",
+  "error": "RuntimeError: codec: codec must decode to the data's shape"
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(fill20 FSO LZMA) eb1 + LZMA corrections",
+  "error": "TypeError: SafeguardedCodec.__init__() got an unexpected keyword argument 'lossless_for_corrections'"
+ }
+]

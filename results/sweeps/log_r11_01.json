@@ -1,0 +1,66 @@
+[
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->20.0, FSO <u1, LZMA)) eb1",
+  "cr": 36.971,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 17.6
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->20.0, FSO <u1, LZMA)) eb1 + LZMA corrections",
+  "cr": 36.789,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 22.9
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->0.0, FSO <u1, LZMA)) eb1",
+  "cr": 35.945,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 15.9
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->0.0, FSO <u1, LZMA)) eb1 + LZMA corrections",
+  "cr": 35.721,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 20.4
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->-2.0, FSO <i1, LZMA)) eb1",
+  "cr": 36.033,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 18.3
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->-2.0, FSO <i1, LZMA)) eb1 + LZMA corrections",
+  "cr": 35.809,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 20.2
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->-178.0, FSO <i1, LZMA)) eb1",
+  "cr": 35.845,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 19.6
+ },
+ {
+  "ch": "01",
+  "name": "Safeguarded(Framed(nan->-178.0, FSO <i1, LZMA)) eb1 + LZMA corrections",
+  "cr": 35.622,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 20.0
+ }
+]

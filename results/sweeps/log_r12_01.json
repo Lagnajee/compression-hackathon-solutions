@@ -1,0 +1,114 @@
+[
+ {
+  "ch": "01",
+  "name": "best: bitmap PackBits+LZMA",
+  "cr": 39.762,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.0
+ },
+ {
+  "ch": "01",
+  "name": "bitmap bool bytes + LZMA9e",
+  "cr": 38.91,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 8.4
+ },
+ {
+  "ch": "01",
+  "name": "bitmap bool bytes + raw LZMA lc0 pb0",
+  "cr": 38.951,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 8.8
+ },
+ {
+  "ch": "01",
+  "name": "bitmap bool bytes + raw LZMA delta1 lc0",
+  "cr": 38.474,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 8.4
+ },
+ {
+  "ch": "01",
+  "name": "bitmap bool bytes + BZ2",
+  "cr": 37.645,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.8
+ },
+ {
+  "ch": "01",
+  "name": "bitmap PackBits + BZ2",
+  "cr": 37.395,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.0
+ },
+ {
+  "ch": "01",
+  "name": "Framed(BitRound abs1, Tokenize, lz delta1 lc4 pb0)",
+  "cr": 27.541,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 7.2
+ },
+ {
+  "ch": "01",
+  "name": "Framed(BitRound abs1, Tokenize, lz nodelta lc4 pb0)",
+  "cr": 30.143,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 6.2
+ },
+ {
+  "ch": "01",
+  "name": "Framed(BitRound abs1, Tokenize, LZMA9e)",
+  "cr": 29.753,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.7
+ },
+ {
+  "ch": "01",
+  "name": "Framed(BitRound abs1, Tokenize, BZ2)",
+  "cr": 32.304,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.9
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round precision=2, Tokenize, lz delta1 lc4 pb0)",
+  "cr": 38.749,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.7
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round precision=2, Tokenize, lz nodelta lc4 pb0)",
+  "cr": 42.802,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.8
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round precision=2, Tokenize, LZMA9e)",
+  "cr": 42.507,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 5.5
+ },
+ {
+  "ch": "01",
+  "name": "Framed(Round precision=2, Tokenize, BZ2)",
+  "cr": 42.579,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.0
+ }
+]

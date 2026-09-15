@@ -1,0 +1,74 @@
+[
+ {
+  "ch": "02",
+  "name": "PWRatio(Sz3 lorenzo) + lzma9e",
+  "cr": 18.06,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.1
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.999999*2eb i2) + lzma9e",
+  "cr": 15.681,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.0
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.999999*2eb i2) + bz2",
+  "cr": 14.207,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.5
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.999999*2eb i2) + zstd22",
+  "cr": 13.049,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 4.1
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.999999*2eb i2) + lzma delta2",
+  "cr": 18.832,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.8
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.9999*2eb i2) + lzma9e",
+  "cr": 15.664,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 3.0
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.9999*2eb i2) + bz2",
+  "cr": 14.198,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 0.4
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.9999*2eb i2) + zstd22",
+  "cr": 13.044,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 2.5
+ },
+ {
+  "ch": "02",
+  "name": "PWRatio(FSO log2 step 0.9999*2eb i2) + lzma delta2",
+  "cr": 18.838,
+  "viol": 0.0,
+  "ok": true,
+  "sec": 1.6
+ }
+]
