@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = "Safeguarded(Zero)"
 ISSUE = {"pressure": 56, "single": 57}
+AUTHOR = "@Lagnajee"
 
 
 def rows_from(path: Path) -> list[dict]:
@@ -81,15 +82,15 @@ def export(leveltype: str, rows: list[dict], expected: dict) -> list[dict]:
         "(`All Data` = FALSE). Full codec configs are in",
         f"[`configs/era5/{leveltype}/`](../configs/era5/{leveltype}/).",
         "",
-        "| Variable | All Data | Compression Ratio | Baseline `Safeguarded(Zero)` | Codec | Config |",
-        "|---|---|---|---|---|---|",
+        "| Variable | All Data | Compression Ratio | Author | Baseline `Safeguarded(Zero)` | Codec | Config |",
+        "|---|---|---|---|---|---|---|",
     ]
     for s in summary:
         if s["best_cr"] == "":
-            lines.append(f"| {s['variable']} | FALSE | — | {s['baseline_cr']} | no passing codec | — |")
+            lines.append(f"| {s['variable']} | FALSE | — | {AUTHOR} | {s['baseline_cr']} | no passing codec | — |")
         else:
             lines.append(
-                f"| {s['variable']} | FALSE | {s['best_cr']:.3f} | {s['baseline_cr']} | {s['codec']} | "
+                f"| {s['variable']} | FALSE | {s['best_cr']:.3f} | {AUTHOR} | {s['baseline_cr']} | {s['codec']} | "
                 f"[json](../configs/era5/{leveltype}/{s['variable']}.json) |"
             )
     (ROOT / "leaderboard" / f"era5-{leveltype}.md").write_text("\n".join(lines) + "\n")

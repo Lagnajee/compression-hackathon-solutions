@@ -77,10 +77,34 @@ Every exported codec passes the notebook's `check_safety_requirements` on the
 one-timestep test subset.
 
 - **Pressure-level (16 variables):** [`leaderboard/era5-pressure.md`](leaderboard/era5-pressure.md), [`results/era5_pressure.csv`](results/era5_pressure.csv)
-- **Single-level (226 variables with requirements):** [`leaderboard/era5-single.md`](leaderboard/era5-single.md), [`results/era5_single.csv`](results/era5_single.csv) — *sweep in progress; the table is extended as variables finish*
+- **Single-level (226 variables with requirements):** [`leaderboard/era5-single.md`](leaderboard/era5-single.md), [`results/era5_single.csv`](results/era5_single.csv)
 
 The other 36 single-level variables (the vertical integrals `vi*`) have no
 recommendation yet, so they cannot be scored.
+
+### Results
+
+| | Pressure-level | Single-level |
+|---|---|---|
+| Variables passing their requirements | 16 / 16 | 226 / 226 |
+| Median compression ratio | ×55.7 | ×49.2 |
+| Median of the `Safeguarded(Zero)` baseline | ×46.1 | ×22.9 |
+| Median gain over the baseline | ×1.35 | ×1.86 |
+| Variables at least 2× better than the baseline | 4 | 99 |
+| Winning codec families | SPERR 9, log-ratio grid 5, safeguard-only 2 | mean-bound grid 211, pointwise grid 7, lossless 5, log-ratio grid 2, safeguard-only 1 |
+
+Highlights: `t` ×787.7, `v` ×135.9, `z` ×132.2, `u` ×131.9 (pressure-level).
+The weakest are relative-bound fields such as `d` ×13.5 and mean-absolute-bound
+single-level fields such as `dl` ×8.1.
+
+**Caveat on the largest single-level ratios.** Seven variables (`avg_esrwe`,
+`csf`, `es`, `istl4`, `lgws`, `mgws`, `smlt`) exceed ×30,000 because their
+field quantises to an almost constant grid while still meeting a mean error
+bound that is large compared to the field itself. These entries are valid under
+the published requirements, but they reflect how loose those requirements are
+rather than compressor quality. They are good candidates for an issue or pull
+request against `compression-recommendations`, as the challenge notebooks
+suggest.
 
 ### Approach
 
@@ -108,7 +132,7 @@ Reproduce or extend:
 ```shell
 uv run python verify_era5.py               # all exported variables (streams fields from S3, cached in data/era5)
 uv run python verify_era5.py single/2t     # one variable
-uv run python scripts/export_era5.py --pressure exploration/era5/log04.json exploration/era5/log04b.json --single exploration/era5/results05
+uv run python scripts/export_era5.py --pressure exploration/era5/log04.json exploration/era5/log04b.json --single exploration/era5/results05 exploration/era5/results05_ext
 ```
 
 ## Repository layout

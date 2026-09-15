@@ -1,0 +1,490 @@
+[
+ {
+  "var": "wmb",
+  "requirements": [
+   "MeanAbsoluteErrorBound(0.1)"
+  ],
+  "nan_fraction": 0.33916204986149584
+ },
+ {
+  "var": "wmb",
+  "codec": "Safeguarded(Zero)",
+  "cr": 38.391,
+  "ok": true,
+  "sec": 0.17,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 0.1,
+          "equal_nan": false
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=16v",
+  "cr": 51.6,
+  "ok": false,
+  "sec": 0.3,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.3125312531253125,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=11v",
+  "cr": 48.542,
+  "ok": false,
+  "sec": 0.31,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.4545909136368182,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=8v",
+  "cr": 46.958,
+  "ok": false,
+  "sec": 0.29,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.625062506250625,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=5.6v",
+  "cr": 44.285,
+  "ok": false,
+  "sec": 0.3,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.892946437500893,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=4v",
+  "cr": 42.595,
+  "ok": false,
+  "sec": 0.31,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 1.25012501250125,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "wmb",
+  "codec": "absq meanabs 0.1 eb=2.8v",
+  "cr": 42.034,
+  "ok": true,
+  "sec": 0.31,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 1.785892875001786,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ }
+]

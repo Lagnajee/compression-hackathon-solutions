@@ -1,0 +1,849 @@
+[
+ {
+  "var": "rhoao",
+  "requirements": [
+   "(MeanAbsoluteErrorBound(0.0) or MeanRelativeErrorBound(0.01))"
+  ],
+  "nan_fraction": 0.33916204986149584
+ },
+ {
+  "var": "rhoao",
+  "codec": "Safeguarded(Zero)",
+  "cr": 9.748,
+  "ok": true,
+  "sec": 0.36,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "abs",
+          "eb": 0.0,
+          "equal_nan": false
+         }
+        }
+       ]
+      },
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "everywhere",
+         "safeguard": {
+          "kind": "eb",
+          "type": "rel",
+          "eb": 0.01,
+          "equal_nan": false
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=16v*mean|x|",
+  "cr": 492.506,
+  "ok": false,
+  "sec": 0.1,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 2.553407434562168,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=11v*mean|x|",
+  "cr": 270.609,
+  "ok": false,
+  "sec": 0.16,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 3.7140471775449724,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=8v*mean|x|",
+  "cr": 375.811,
+  "ok": false,
+  "sec": 0.13,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 5.106814869124336,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=5.6v*mean|x|",
+  "cr": 284.454,
+  "ok": false,
+  "sec": 0.15,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 7.295449813034768,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=4v*mean|x|",
+  "cr": 234.744,
+  "ok": false,
+  "sec": 0.21,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 10.213629738248672,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=2.8v*mean|x|",
+  "cr": 224.141,
+  "ok": false,
+  "sec": 0.21,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 14.590899626069536,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=2v*mean|x|",
+  "cr": 182.432,
+  "ok": false,
+  "sec": 0.22,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 20.427259476497344,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "absq meanrel 0.01 eb=1.4v*mean|x|",
+  "cr": 160.979,
+  "ok": true,
+  "sec": 0.2,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 29.181799252139072,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "|i1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "relq meanrel 0.01 ratio=1+4v",
+  "cr": 238.705,
+  "ok": false,
+  "sec": 0.24,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.04,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 8.837377580322881,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "relq meanrel 0.01 ratio=1+2.8v",
+  "cr": 203.919,
+  "ok": false,
+  "sec": 0.28,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.028,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 12.551372609523668,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "var": "rhoao",
+  "codec": "relq meanrel 0.01 ratio=1+1.9v",
+  "cr": 178.379,
+  "ok": true,
+  "sec": 0.31,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": "finite_mean"
+      }
+     },
+     {
+      "id": "pw_ratio",
+      "eb_ratio": 1.019,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+       "id": "fixedscaleoffset",
+       "scale": 18.41530001266561,
+       "offset": 0,
+       "dtype": "<f8",
+       "astype": "<i2"
+      },
+      "sign_codec": {
+       "id": "zstd.rs",
+       "level": 19,
+       "_version": "0.1.0"
+      }
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ }
+]

@@ -1,0 +1,177 @@
+[
+ {
+  "var": "tvl",
+  "requirements": [
+   "Lossless",
+   "DataLimits(minimum=0, maximum=20)"
+  ],
+  "nan_fraction": 0.0
+ },
+ {
+  "var": "tvl",
+  "codec": "Safeguarded(Zero)",
+  "cr": 208.294,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "zero"
+   },
+   "safeguards": [
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "lossless"
+      }
+     ]
+    },
+    {
+     "kind": "all",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x >= c[\"minimum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "minimum": 0
+         }
+        },
+        {
+         "kind": "qoi_eb_pw",
+         "qoi": "x <= c[\"maximum\"]",
+         "type": "abs",
+         "eb": 0,
+         "qoi_dtype": "lossless",
+         "early_bound": {
+          "maximum": 20
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "tvl",
+  "codec": "lossless LZMA",
+  "cr": 191.991,
+  "ok": true,
+  "sec": 1.28,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "tvl",
+  "codec": "lossless int8 grid + LZMA",
+  "cr": 240.292,
+  "ok": true,
+  "sec": 0.39,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

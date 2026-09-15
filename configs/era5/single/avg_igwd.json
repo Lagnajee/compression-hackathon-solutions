@@ -1,0 +1,96 @@
+{
+  "id": "safeguards",
+  "codec": {
+    "id": "zero"
+  },
+  "safeguards": [
+    {
+      "kind": "any",
+      "safeguards": [
+        {
+          "kind": "all",
+          "safeguards": [
+            {
+              "kind": "everywhere",
+              "safeguard": {
+                "kind": "eb",
+                "type": "rel",
+                "eb": 0.01,
+                "equal_nan": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fixed_constants": {},
+  "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+      "id": "combinators.best",
+      "codecs": [
+        {
+          "id": "combinators.stack",
+          "codecs": [
+            {
+              "id": "tokenize"
+            },
+            {
+              "id": "bitmap-index",
+              "max_bitmaps": 1,
+              "cost_factor": 1
+            },
+            {
+              "id": "shuffle.typed-byte"
+            },
+            {
+              "id": "combinators.framed",
+              "codecs": [
+                {
+                  "id": "zstd",
+                  "level": 3,
+                  "checksum": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combinators.stack",
+          "codecs": [
+            {
+              "id": "delta.binary"
+            },
+            {
+              "id": "tokenize"
+            },
+            {
+              "id": "bitmap-index",
+              "max_bitmaps": 1,
+              "cost_factor": 1
+            },
+            {
+              "id": "shuffle.typed-byte"
+            },
+            {
+              "id": "combinators.framed",
+              "codecs": [
+                {
+                  "id": "zstd",
+                  "level": 3,
+                  "checksum": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+  },
+  "_version": "1.0.0"
+}

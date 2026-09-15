@@ -23,7 +23,8 @@ import numpy as np
 HERE = Path(__file__).parent
 TIME = "2026-07-15T12:00:00"
 E = 9 | lzma.PRESET_EXTREME
-OUT = HERE / "results05"
+import os
+OUT = HERE / os.environ.get("SWEEP05_OUT", "results05")
 
 
 def load(v):
@@ -114,7 +115,7 @@ def candidates(x, reqs):
         if wrap_full:
             c[f"Safeguarded({name})"] = (lambda: SafeguardedCodec(codec=make(), safeguards=full_sg), None)
 
-    LADDER = (16, 11, 8, 5.6, 4, 2.8, 2, 1.4, 1.0)
+    LADDER = tuple(float(k) for k in os.environ.get("SWEEP05_LADDER", "16,11,8,5.6,4,2.8,2,1.4,1.0").split(","))
     for leaf in {(r.kind.name, float(getattr(r, "value", 0) or 0)) for req in reqs for r in leaves(req)}:
         kind, v = leaf
         if kind == "max_pointwise_absolute_error_bound" and v > 0:

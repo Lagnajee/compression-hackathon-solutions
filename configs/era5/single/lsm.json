@@ -1,0 +1,12 @@
+{
+  "id": "combinators.framed",
+  "codecs": [
+    {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+    }
+  ]
+}

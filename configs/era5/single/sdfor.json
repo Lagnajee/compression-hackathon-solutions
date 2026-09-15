@@ -1,0 +1,41 @@
+{
+  "id": "combinators.stack",
+  "codecs": [
+    {
+      "id": "pw_ratio",
+      "eb_ratio": 1.05,
+      "eb_abs_marker": "$eb_abs",
+      "log_codec": {
+        "id": "fixedscaleoffset",
+        "scale": 7.104059947439975,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+      },
+      "sign_codec": {
+        "id": "zstd.rs",
+        "level": 19,
+        "_version": "0.1.0"
+      }
+    },
+    {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+        {
+          "id": 3,
+          "dist": 2
+        },
+        {
+          "id": 33,
+          "preset": 2147483657,
+          "lc": 1,
+          "lp": 1,
+          "pb": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "mask.meta",
+  "mask": NaN,
+  "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+      {
+        "id": "replace.filter",
+        "replacements": {
+          "nan": "finite_mean"
+        }
+      },
+      {
+        "id": "pw_ratio",
+        "eb_ratio": 1.019,
+        "eb_abs_marker": "$eb_abs",
+        "log_codec": {
+          "id": "fixedscaleoffset",
+          "scale": 18.41530001266561,
+          "offset": 0,
+          "dtype": "<f8",
+          "astype": "<i2"
+        },
+        "sign_codec": {
+          "id": "zstd.rs",
+          "level": 19,
+          "_version": "0.1.0"
+        }
+      },
+      {
+        "id": "lzma",
+        "format": 3,
+        "check": -1,
+        "preset": null,
+        "filters": [
+          {
+            "id": 3,
+            "dist": 2
+          },
+          {
+            "id": 33,
+            "preset": 2147483657,
+            "lc": 1,
+            "lp": 1,
+            "pb": 1
+          }
+        ]
+      }
+    ]
+  },
+  "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+      {
+        "id": "packbits"
+      },
+      {
+        "id": "lzma",
+        "format": 1,
+        "check": -1,
+        "preset": 2147483657,
+        "filters": null
+      }
+    ]
+  }
+}

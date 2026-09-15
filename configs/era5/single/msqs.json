@@ -1,0 +1,56 @@
+{
+  "id": "mask.meta",
+  "mask": NaN,
+  "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+      {
+        "id": "replace.filter",
+        "replacements": {
+          "nan": "finite_mean"
+        }
+      },
+      {
+        "id": "fixedscaleoffset",
+        "scale": 3078.107125802205,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+      },
+      {
+        "id": "lzma",
+        "format": 3,
+        "check": -1,
+        "preset": null,
+        "filters": [
+          {
+            "id": 3,
+            "dist": 2
+          },
+          {
+            "id": 33,
+            "preset": 2147483657,
+            "lc": 1,
+            "lp": 1,
+            "pb": 1
+          }
+        ]
+      }
+    ]
+  },
+  "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+      {
+        "id": "packbits"
+      },
+      {
+        "id": "lzma",
+        "format": 1,
+        "check": -1,
+        "preset": 2147483657,
+        "filters": null
+      }
+    ]
+  }
+}

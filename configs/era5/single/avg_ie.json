@@ -1,0 +1,31 @@
+{
+  "id": "combinators.framed",
+  "codecs": [
+    {
+      "id": "fixedscaleoffset",
+      "scale": 895700.1168516768,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+    },
+    {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+        {
+          "id": 3,
+          "dist": 2
+        },
+        {
+          "id": 33,
+          "preset": 2147483657,
+          "lc": 1,
+          "lp": 1,
+          "pb": 1
+        }
+      ]
+    }
+  ]
+}
