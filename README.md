@@ -117,7 +117,7 @@ sweep therefore builds candidates from each variable's requirement tree:
 |---|---|
 | Pointwise absolute `ε` | step-`2ε` integer grid + LZMA2, SZ3, SPERR; also wrapped in the full safeguards |
 | Pointwise relative `ε` | log2 grid inside `PointwiseRatioErrorBoundedCodec` + LZMA2 (as in challenge 02) |
-| Mean absolute `ε` | step-`2kε` grid, descending ladder `k = 16 … 1`; the first passing `k` is kept |
+| Mean absolute `ε` | step-`2kε` grid, descending ladder `k = 16 … 1` (extended to `k = 256 … 22.6` for the 18 variables that passed at `k = 16`); the first passing `k` is kept |
 | Mean relative `ε` | absolute grid scaled by `ε·mean|x|`, and log2 grid with ratio `1 + kε` |
 | Data limits | the candidates above, wrapped in only the data-limit safeguards |
 | Lossless | LZMA2, integer tokens + LZMA2 |
