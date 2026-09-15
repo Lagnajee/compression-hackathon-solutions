@@ -14,6 +14,8 @@ dependencies = [
     "compression-requirement-checks==0.1.0a1",
     "compression-requirement-safeguards==0.1.0a1",
     "compression-safeguards==1.0.0rc3",
+    "dask==2026.8.0",
+    "gribscan==0.0.16",
     "h5netcdf==1.8.1",
     "h5py==3.16.0",
     "kerchunk==0.2.10",
