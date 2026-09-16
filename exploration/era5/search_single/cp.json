@@ -1,0 +1,389 @@
+[
+ {
+  "var": "cp",
+  "requirements": [
+   "MeanAbsoluteErrorBound(1e-05)",
+   "DataLimits(minimum=0.0)"
+  ]
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=1",
+  "cr": 48.691,
+  "ok": true,
+  "sec": 4.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 50005.00050005,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=2",
+  "cr": 64.805,
+  "ok": true,
+  "sec": 3.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 25002.500250025,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=4",
+  "cr": 90.197,
+  "ok": true,
+  "sec": 3.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 12501.2501250125,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=8",
+  "cr": 141.655,
+  "ok": true,
+  "sec": 3.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 6250.62506250625,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=16",
+  "cr": 229.998,
+  "ok": false,
+  "sec": 3.2,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 3125.312531253125,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=11.31",
+  "cr": 179.607,
+  "ok": false,
+  "sec": 3.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 4419.859368352756,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=9.514",
+  "cr": 158.91,
+  "ok": false,
+  "sec": 3.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 5256.128208156531,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 grid p=8.724",
+  "cr": 149.5,
+  "ok": false,
+  "sec": 3.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 5731.848454874682,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 SZ3 abs p=1",
+  "cr": 46.862,
+  "ok": false,
+  "sec": 3.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 1e-05,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 SPERR pwe p=1",
+  "cr": 39.018,
+  "ok": false,
+  "sec": 4.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 1e-05,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "cp",
+  "codec": "meanabs 1e-05 SPERR q p=1",
+  "cr": 34.826,
+  "ok": false,
+  "sec": 4.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 1e-05,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,2378 @@
+[
+ {
+  "var": "2d",
+  "requirements": [
+   "MaxPointwiseAbsoluteErrorBound(0.05)"
+  ]
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded grid p=1",
+  "cr": 20.218,
+  "ok": true,
+  "sec": 15.4,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 10.00100010001,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded grid p=2",
+  "cr": 14.038,
+  "ok": true,
+  "sec": 17.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 5.000500050005,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded grid p=4",
+  "cr": 12.976,
+  "ok": true,
+  "sec": 15.8,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 2.5002500250025,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded grid p=8",
+  "cr": 13.386,
+  "ok": true,
+  "sec": 11.3,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 1.25012501250125,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded grid p=16",
+  "cr": 13.815,
+  "ok": true,
+  "sec": 11.0,
+  "config": {
+   "id": "safeguards",
+   "codec": {
+    "id": "combinators.framed",
+    "codecs": [
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.625062506250625,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 2
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 1,
+        "lp": 1,
+        "pb": 1
+       }
+      ]
+     }
+    ]
+   },
+   "safeguards": [
+    {
+     "kind": "any",
+     "safeguards": [
+      {
+       "kind": "all",
+       "safeguards": [
+        {
+         "kind": "eb",
+         "type": "abs",
+         "eb": 0.05,
+         "equal_nan": false
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "fixed_constants": {},
+   "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+     "id": "combinators.best",
+     "codecs": [
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "combinators.stack",
+       "codecs": [
+        {
+         "id": "delta.binary"
+        },
+        {
+         "id": "tokenize"
+        },
+        {
+         "id": "bitmap-index",
+         "max_bitmaps": 1,
+         "cost_factor": 1
+        },
+        {
+         "id": "shuffle.typed-byte"
+        },
+        {
+         "id": "combinators.framed",
+         "codecs": [
+          {
+           "id": "zstd",
+           "level": 3,
+           "checksum": false
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+   },
+   "_version": "1.0.0"
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SZ3 abs p=1",
+  "cr": 23.436,
+  "ok": true,
+  "sec": 8.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": 0.05,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SZ3 abs p=2",
+  "cr": 16.187,
+  "ok": true,
+  "sec": 11.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": 0.1,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SZ3 abs p=4",
+  "cr": 14.669,
+  "ok": true,
+  "sec": 9.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": 0.2,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SZ3 abs p=8",
+  "cr": 14.296,
+  "ok": true,
+  "sec": 9.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": 0.4,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SZ3 abs p=16",
+  "cr": 14.555,
+  "ok": true,
+  "sec": 9.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": 0.8,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR pwe p=1",
+  "cr": 21.543,
+  "ok": true,
+  "sec": 8.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.05,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR pwe p=2",
+  "cr": 20.181,
+  "ok": true,
+  "sec": 9.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.1,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR pwe p=4",
+  "cr": 17.702,
+  "ok": true,
+  "sec": 9.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.2,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR pwe p=8",
+  "cr": 16.332,
+  "ok": true,
+  "sec": 9.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.4,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR pwe p=16",
+  "cr": 15.713,
+  "ok": true,
+  "sec": 9.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": 0.8,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR q p=1",
+  "cr": 19.113,
+  "ok": true,
+  "sec": 10.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.05,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR q p=2",
+  "cr": 21.352,
+  "ok": true,
+  "sec": 9.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.1,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR q p=4",
+  "cr": 19.164,
+  "ok": true,
+  "sec": 10.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.2,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR q p=8",
+  "cr": 17.032,
+  "ok": true,
+  "sec": 10.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.4,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "2d",
+  "codec": "pwabs 0.05 safeguarded SPERR q p=16",
+  "cr": 16.075,
+  "ok": true,
+  "sec": 10.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "safeguards",
+     "codec": {
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.8,
+      "_version": "0.2.0"
+     },
+     "safeguards": [
+      {
+       "kind": "any",
+       "safeguards": [
+        {
+         "kind": "all",
+         "safeguards": [
+          {
+           "kind": "eb",
+           "type": "abs",
+           "eb": 0.05,
+           "equal_nan": false
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "fixed_constants": {},
+     "lossless": {
+      "for_codec": null,
+      "for_corrections": {
+       "id": "combinators.best",
+       "codecs": [
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "combinators.stack",
+         "codecs": [
+          {
+           "id": "delta.binary"
+          },
+          {
+           "id": "tokenize"
+          },
+          {
+           "id": "bitmap-index",
+           "max_bitmaps": 1,
+           "cost_factor": 1
+          },
+          {
+           "id": "shuffle.typed-byte"
+          },
+          {
+           "id": "combinators.framed",
+           "codecs": [
+            {
+             "id": "zstd",
+             "level": 3,
+             "checksum": false
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     "compute": {
+      "unstable_iterative": false,
+      "unstable_lossless_corrections": false
+     },
+     "_version": "1.0.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

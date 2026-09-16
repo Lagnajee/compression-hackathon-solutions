@@ -3,7 +3,7 @@
   "codecs": [
     {
       "id": "fixedscaleoffset",
-      "scale": 612.5905252180935,
+      "scale": 561.7479884538649,
       "offset": 0,
       "dtype": "<f8",
       "astype": "<i2"

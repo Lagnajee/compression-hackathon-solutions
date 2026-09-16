@@ -1,0 +1,313 @@
+[
+ {
+  "var": "avg_sdirswrfcs",
+  "requirements": [
+   "MeanAbsoluteErrorBound(0.1)",
+   "DataLimits(minimum=0.0)"
+  ]
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=1",
+  "cr": 35.782,
+  "ok": true,
+  "sec": 6.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 5.000500050005,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=2",
+  "cr": 47.834,
+  "ok": true,
+  "sec": 6.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 2.5002500250025,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=4",
+  "cr": 64.247,
+  "ok": false,
+  "sec": 6.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.25012501250125,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=2.828",
+  "cr": 55.433,
+  "ok": true,
+  "sec": 6.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.7679437473411026,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=3.364",
+  "cr": 59.759,
+  "ok": true,
+  "sec": 6.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.486657559509352,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 grid p=3.668",
+  "cr": 61.9,
+  "ok": true,
+  "sec": 6.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 1.3632709929308653,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 SZ3 abs p=1",
+  "cr": 56.302,
+  "ok": false,
+  "sec": 7.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.1,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 SPERR pwe p=1",
+  "cr": 54.222,
+  "ok": false,
+  "sec": 6.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.1,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "avg_sdirswrfcs",
+  "codec": "meanabs 0.1 SPERR q p=1",
+  "cr": 47.235,
+  "ok": false,
+  "sec": 6.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.1,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

@@ -1,31 +1,18 @@
 {
-  "id": "combinators.framed",
+  "id": "combinators.stack",
   "codecs": [
     {
-      "id": "fixedscaleoffset",
-      "scale": 2.5002500250025,
-      "offset": 0,
-      "dtype": "<f8",
-      "astype": "<i2"
+      "id": "sperr.rs",
+      "mode": "q",
+      "q": 0.5656854249492381,
+      "_version": "0.2.0"
     },
     {
       "id": "lzma",
-      "format": 3,
+      "format": 1,
       "check": -1,
-      "preset": null,
-      "filters": [
-        {
-          "id": 3,
-          "dist": 2
-        },
-        {
-          "id": 33,
-          "preset": 2147483657,
-          "lc": 1,
-          "lp": 1,
-          "pb": 1
-        }
-      ]
+      "preset": 2147483657,
+      "filters": null
     }
   ]
 }

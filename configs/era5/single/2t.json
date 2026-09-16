@@ -1,31 +1,109 @@
 {
-  "id": "combinators.framed",
+  "id": "combinators.stack",
   "codecs": [
     {
-      "id": "fixedscaleoffset",
-      "scale": 10.00100010001,
-      "offset": 0,
-      "dtype": "<f8",
-      "astype": "<i2"
+      "id": "safeguards",
+      "codec": {
+        "id": "sz3.rs",
+        "predictor": "interpolation-lorenzo",
+        "eb_mode": "abs",
+        "eb_abs": 0.05,
+        "_version": "0.2.0"
+      },
+      "safeguards": [
+        {
+          "kind": "any",
+          "safeguards": [
+            {
+              "kind": "all",
+              "safeguards": [
+                {
+                  "kind": "eb",
+                  "type": "abs",
+                  "eb": 0.05,
+                  "equal_nan": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "fixed_constants": {},
+      "lossless": {
+        "for_codec": null,
+        "for_corrections": {
+          "id": "combinators.best",
+          "codecs": [
+            {
+              "id": "combinators.stack",
+              "codecs": [
+                {
+                  "id": "tokenize"
+                },
+                {
+                  "id": "bitmap-index",
+                  "max_bitmaps": 1,
+                  "cost_factor": 1
+                },
+                {
+                  "id": "shuffle.typed-byte"
+                },
+                {
+                  "id": "combinators.framed",
+                  "codecs": [
+                    {
+                      "id": "zstd",
+                      "level": 3,
+                      "checksum": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "combinators.stack",
+              "codecs": [
+                {
+                  "id": "delta.binary"
+                },
+                {
+                  "id": "tokenize"
+                },
+                {
+                  "id": "bitmap-index",
+                  "max_bitmaps": 1,
+                  "cost_factor": 1
+                },
+                {
+                  "id": "shuffle.typed-byte"
+                },
+                {
+                  "id": "combinators.framed",
+                  "codecs": [
+                    {
+                      "id": "zstd",
+                      "level": 3,
+                      "checksum": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "compute": {
+        "unstable_iterative": false,
+        "unstable_lossless_corrections": false
+      },
+      "_version": "1.0.0"
     },
     {
       "id": "lzma",
-      "format": 3,
+      "format": 1,
       "check": -1,
-      "preset": null,
-      "filters": [
-        {
-          "id": 3,
-          "dist": 2
-        },
-        {
-          "id": 33,
-          "preset": 2147483657,
-          "lc": 1,
-          "lp": 1,
-          "pb": 1
-        }
-      ]
+      "preset": 2147483657,
+      "filters": null
     }
   ]
 }

@@ -1,0 +1,32 @@
+[
+ {
+  "var": "lsm",
+  "requirements": [
+   "Lossless",
+   "Isovalue(0.5)",
+   "DataLimits(minimum=0.0, maximum=1.0)"
+  ]
+ },
+ {
+  "var": "lsm",
+  "codec": "lossless Tokenize+LZMA p=1",
+  "cr": 10.809,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

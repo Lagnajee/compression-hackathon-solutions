@@ -1,0 +1,2644 @@
+[
+ {
+  "var": "asn",
+  "requirements": [
+   "(MeanAbsoluteErrorBound(0.001) or MeanRelativeErrorBound(0.001))"
+  ]
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=1",
+  "cr": 603.716,
+  "ok": true,
+  "sec": 20.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 500.05000500050005,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=2",
+  "cr": 687.633,
+  "ok": true,
+  "sec": 19.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 250.02500250025003,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=4",
+  "cr": 839.83,
+  "ok": true,
+  "sec": 20.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 125.01250125012501,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=8",
+  "cr": 1001.075,
+  "ok": true,
+  "sec": 20.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 62.506250625062506,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=16",
+  "cr": 1150.723,
+  "ok": false,
+  "sec": 20.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 31.253125312531253,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=11.31",
+  "cr": 1123.94,
+  "ok": false,
+  "sec": 20.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 44.19859368352757,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=9.514",
+  "cr": 1114.589,
+  "ok": false,
+  "sec": 20.1,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 52.56128208156532,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 grid p=8.724",
+  "cr": 1119.698,
+  "ok": false,
+  "sec": 20.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 57.318484548746824,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "|i1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=1",
+  "cr": 348.871,
+  "ok": true,
+  "sec": 17.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.001,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=2",
+  "cr": 425.77,
+  "ok": true,
+  "sec": 18.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.002,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=4",
+  "cr": 535.728,
+  "ok": true,
+  "sec": 18.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.004,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=8",
+  "cr": 697.742,
+  "ok": true,
+  "sec": 17.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.008,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=16",
+  "cr": 1020.383,
+  "ok": false,
+  "sec": 17.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.016,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=11.31",
+  "cr": 864.84,
+  "ok": false,
+  "sec": 17.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.011313708498984762,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=9.514",
+  "cr": 784.762,
+  "ok": true,
+  "sec": 17.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.009513656920021768,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SZ3 abs p=10.37",
+  "cr": 809.228,
+  "ok": false,
+  "sec": 17.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.010374716437208078,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=1",
+  "cr": 228.939,
+  "ok": true,
+  "sec": 19.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.001,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=2",
+  "cr": 290.946,
+  "ok": true,
+  "sec": 19.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.002,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=4",
+  "cr": 387.982,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.004,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=8",
+  "cr": 536.697,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.008,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=16",
+  "cr": 780.338,
+  "ok": true,
+  "sec": 18.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.016,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=32",
+  "cr": 1205.854,
+  "ok": true,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.032,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=64",
+  "cr": 1985.163,
+  "ok": false,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.064,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=45.25",
+  "cr": 1547.303,
+  "ok": true,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.04525483399593905,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=53.82",
+  "cr": 1746.409,
+  "ok": false,
+  "sec": 19.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.053817370576237734,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR pwe p=49.35",
+  "cr": 1638.895,
+  "ok": true,
+  "sec": 18.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.04935074641305411,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=1",
+  "cr": 207.69,
+  "ok": true,
+  "sec": 18.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.001,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=2",
+  "cr": 259.95,
+  "ok": true,
+  "sec": 18.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.002,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=4",
+  "cr": 338.52,
+  "ok": true,
+  "sec": 17.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.004,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=8",
+  "cr": 455.468,
+  "ok": true,
+  "sec": 18.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.008,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=16",
+  "cr": 638.328,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.016,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=32",
+  "cr": 965.805,
+  "ok": true,
+  "sec": 18.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.032,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=64",
+  "cr": 1547.303,
+  "ok": true,
+  "sec": 19.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.064,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=128",
+  "cr": 2638.475,
+  "ok": false,
+  "sec": 18.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.128,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=90.51",
+  "cr": 1983.266,
+  "ok": false,
+  "sec": 18.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0905096679918781,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=76.11",
+  "cr": 1731.843,
+  "ok": false,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.07610925536017414,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanabs 0.001 SPERR q p=69.79",
+  "cr": 1635.024,
+  "ok": true,
+  "sec": 18.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0697924948905765,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=1",
+  "cr": 581.077,
+  "ok": true,
+  "sec": 19.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 571.0261227205165,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=2",
+  "cr": 681.148,
+  "ok": true,
+  "sec": 19.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 285.51306136025823,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=4",
+  "cr": 746.264,
+  "ok": false,
+  "sec": 19.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 142.75653068012912,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=2.828",
+  "cr": 706.046,
+  "ok": false,
+  "sec": 19.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 201.88822180516945,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=2.378",
+  "cr": 697.273,
+  "ok": false,
+  "sec": 19.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 240.086909805955,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) grid p=2.181",
+  "cr": 688.089,
+  "ok": false,
+  "sec": 19.8,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "fixedscaleoffset",
+     "scale": 261.8166316551002,
+     "offset": 0,
+     "dtype": "<f8",
+     "astype": "<i2"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=1",
+  "cr": 337.365,
+  "ok": true,
+  "sec": 16.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.0008757042543310141,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=2",
+  "cr": 409.401,
+  "ok": true,
+  "sec": 16.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.0017514085086620282,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=4",
+  "cr": 519.77,
+  "ok": true,
+  "sec": 16.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.0035028170173240563,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=8",
+  "cr": 675.278,
+  "ok": true,
+  "sec": 17.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.007005634034648113,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=16",
+  "cr": 961.779,
+  "ok": false,
+  "sec": 17.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.014011268069296224,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=11.31",
+  "cr": 802.039,
+  "ok": false,
+  "sec": 16.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.009907462664821906,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=9.514",
+  "cr": 706.767,
+  "ok": true,
+  "sec": 16.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.008331149839108754,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SZ3 abs p=10.37",
+  "cr": 763.412,
+  "ok": true,
+  "sec": 15.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sz3.rs",
+     "predictor": "interpolation-lorenzo",
+     "eb_mode": "abs",
+     "eb_abs": 0.009085183321541014,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=1",
+  "cr": 219.408,
+  "ok": true,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.0008757042543310141,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=2",
+  "cr": 277.308,
+  "ok": true,
+  "sec": 18.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.0017514085086620282,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=4",
+  "cr": 368.17,
+  "ok": true,
+  "sec": 19.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.0035028170173240563,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=8",
+  "cr": 502.536,
+  "ok": true,
+  "sec": 18.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.007005634034648113,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=16",
+  "cr": 720.25,
+  "ok": true,
+  "sec": 19.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.014011268069296224,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=32",
+  "cr": 1105.098,
+  "ok": true,
+  "sec": 18.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.02802253613859245,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=64",
+  "cr": 1793.161,
+  "ok": false,
+  "sec": 18.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.0560450722771849,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=45.25",
+  "cr": 1411.611,
+  "ok": true,
+  "sec": 19.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.039629850659287626,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=53.82",
+  "cr": 1591.172,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.04712810037052012,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR pwe p=58.69",
+  "cr": 1699.247,
+  "ok": false,
+  "sec": 19.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "pwe",
+     "pwe": 0.05139355787987659,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=1",
+  "cr": 199.527,
+  "ok": true,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0008757042543310141,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=2",
+  "cr": 248.383,
+  "ok": true,
+  "sec": 18.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0017514085086620282,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=4",
+  "cr": 320.099,
+  "ok": true,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0035028170173240563,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=8",
+  "cr": 429.38,
+  "ok": true,
+  "sec": 18.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.007005634034648113,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=16",
+  "cr": 596.347,
+  "ok": true,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.014011268069296224,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=32",
+  "cr": 889.285,
+  "ok": true,
+  "sec": 18.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.02802253613859245,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=64",
+  "cr": 1401.134,
+  "ok": true,
+  "sec": 19.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.0560450722771849,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=128",
+  "cr": 2343.657,
+  "ok": false,
+  "sec": 18.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.1120901445543698,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=90.51",
+  "cr": 1791.613,
+  "ok": false,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.07925970131857525,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=76.11",
+  "cr": 1586.31,
+  "ok": true,
+  "sec": 18.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.06664919871287003,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 (abs) SPERR q p=83",
+  "cr": 1677.286,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "sperr.rs",
+     "mode": "q",
+     "q": 0.07268146657232812,
+     "_version": "0.2.0"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=1",
+  "cr": 326.08,
+  "ok": true,
+  "sec": 16.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.001,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=2",
+  "cr": 395.897,
+  "ok": true,
+  "sec": 16.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0020009999999997,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=4",
+  "cr": 499.995,
+  "ok": true,
+  "sec": 17.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0040060040009995,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=8",
+  "cr": 637.544,
+  "ok": true,
+  "sec": 17.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0080280560700552,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=16",
+  "cr": 905.573,
+  "ok": false,
+  "sec": 15.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0161205618243743,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=11.31",
+  "cr": 675.498,
+  "ok": true,
+  "sec": 18.0,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0113722331521022,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=13.45",
+  "cr": 830.592,
+  "ok": false,
+  "sec": 16.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0135384458695154,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SZ3) p=12.34",
+  "cr": 792.247,
+  "ok": false,
+  "sec": 16.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0124078685862263,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sz3.rs",
+      "predictor": "interpolation-lorenzo",
+      "eb_mode": "abs",
+      "eb_abs": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=1",
+  "cr": 214.69,
+  "ok": true,
+  "sec": 18.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.001,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=2",
+  "cr": 270.939,
+  "ok": true,
+  "sec": 19.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0020009999999997,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=4",
+  "cr": 356.355,
+  "ok": true,
+  "sec": 18.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0040060040009995,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=8",
+  "cr": 483.015,
+  "ok": true,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0080280560700552,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=16",
+  "cr": 684.178,
+  "ok": true,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0161205618243743,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=32",
+  "cr": 1025.929,
+  "ok": true,
+  "sec": 17.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.032500996162282,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=64",
+  "cr": 1638.895,
+  "ok": false,
+  "sec": 17.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0660583070761045,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=45.25",
+  "cr": 1301.053,
+  "ok": true,
+  "sec": 18.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0462707984336868,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=53.82",
+  "cr": 1468.515,
+  "ok": true,
+  "sec": 19.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0552634799932725,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "var": "asn",
+  "codec": "meanrel 0.001 PwRatio(SPERR) p=58.69",
+  "cr": 1550.769,
+  "ok": false,
+  "sec": 18.5,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.0604135082576727,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "sperr.rs",
+      "mode": "pwe",
+      "pwe": "$eb_abs",
+      "_version": "0.2.0"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

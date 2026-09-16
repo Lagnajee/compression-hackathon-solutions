@@ -83,24 +83,25 @@ recommendation yet, so they cannot be scored.
 | | Pressure-level | Single-level |
 |---|---|---|
 | Variables passing their requirements | 16 / 16 | 226 / 226 |
-| Median compression ratio | ×55.7 | ×49.2 |
+| Median compression ratio | ×55.7 | ×50.8 |
 | Median of the `Safeguarded(Zero)` baseline | ×46.1 | ×22.9 |
-| Median gain over the baseline | ×1.35 | ×1.86 |
-| Variables at least 2× better than the baseline | 4 | 99 |
-| Winning codec families | SPERR 9, log-ratio grid 5, safeguard-only 2 | mean-bound grid 211, pointwise grid 7, lossless 5, log-ratio grid 2, safeguard-only 1 |
+| Median gain over the baseline | ×1.35 | ×2.00 |
+| Variables at least 2× better than the baseline | 4 | 113 |
+| Winning codec families | SPERR 9, log-ratio grid 5, safeguard-only 2 | grid 180, SPERR 23, log-ratio grid 13, lossless 5, SZ3 4, safeguard-only 1 |
+| Median throughput (this machine, 4 workers) | 0.012 GB/s compress, 0.086 GB/s decompress | 0.016 GB/s compress, 0.525 GB/s decompress |
 
 Highlights: `t` ×787.7, `v` ×135.9, `z` ×132.2, `u` ×131.9 (pressure-level).
 The weakest are relative-bound fields such as `d` ×13.5 and mean-absolute-bound
 single-level fields such as `dl` ×8.1.
 
-**Caveat on the largest single-level ratios.** Seven variables (`avg_esrwe`,
-`csf`, `es`, `istl4`, `lgws`, `mgws`, `smlt`) exceed ×30,000 because their
-field quantises to an almost constant grid while still meeting a mean error
-bound that is large compared to the field itself. These entries are valid under
-the published requirements, but they reflect how loose those requirements are
-rather than compressor quality. They are good candidates for an issue or pull
-request against `compression-recommendations`, as the challenge notebooks
-suggest.
+**Caveat on the largest single-level ratios.** 27 variables exceed ×1,000 and
+seven of them (`avg_esrwe`, `csf`, `es`, `istl4`, `lgws`, `mgws`, `smlt`)
+exceed ×30,000, because the field collapses to an almost constant grid while
+still meeting a mean error bound that is large compared to the field itself.
+These entries are valid under the published requirements, but they reflect how
+loose those requirements are rather than compressor quality. They are good
+candidates for an issue or pull request against `compression-recommendations`,
+as the challenge notebooks suggest.
 
 ### Approach
 
@@ -114,6 +115,7 @@ sweep therefore builds candidates from each variable's requirement tree:
 | Pointwise absolute `ε` | step-`2ε` integer grid + LZMA2, SZ3, SPERR; also wrapped in the full safeguards |
 | Pointwise relative `ε` | log2 grid inside `PointwiseRatioErrorBoundedCodec` + LZMA2 (as in challenge 02) |
 | Mean absolute `ε` | step-`2kε` grid, descending ladder `k = 16 … 1` (extended to `k = 256 … 22.6` for the 18 variables that passed at `k = 16`); the first passing `k` is kept |
+| Any of the above | `exploration/era5/search.py` re-searches each family by doubling the looseness `p` until the check fails, then bisecting. Run for all 16 pressure-level variables and 46 of the single-level ones; it improved 40 single-level variables (for example `2t` ×21.5 → ×25.0, `swh` ×35.0 → ×42.9). |
 | Mean relative `ε` | absolute grid scaled by `ε·mean|x|`, and log2 grid with ratio `1 + kε` |
 | Data limits | the candidates above, wrapped in only the data-limit safeguards |
 | Lossless | LZMA2, integer tokens + LZMA2 |
@@ -128,8 +130,19 @@ Reproduce or extend:
 ```shell
 uv run python verify_era5.py               # all exported variables (streams fields from S3, cached in data/era5)
 uv run python verify_era5.py single/2t     # one variable
-uv run python scripts/export_era5.py --pressure exploration/era5/log04.json exploration/era5/log04b.json --single exploration/era5/results05 exploration/era5/results05_ext
+uv run python scripts/export_era5.py \
+    --pressure exploration/era5/log04.json exploration/era5/log04b.json exploration/era5/search_pressure \
+    --single exploration/era5/results05 exploration/era5/results05_ext exploration/era5/search_single
+uv run python scripts/throughput_era5.py 4   # encode/decode speed per variable
+uv run python scripts/sheet_rows_era5.py     # leaderboard/sheet/ERA5-*.tsv
 ```
+
+Known gap: the safeguard translation of a `DataLimits` requirement on its own
+returns no safeguards (`safeguards_for_requirements(DataLimits(...)) == []`), so
+codecs that can undershoot a minimum are rejected by the checker rather than
+corrected. A `sign` safeguard at the limit fixes it but costs far more than it
+saves on mostly-zero fields (`cp`: ×141.7 with the grid versus ×3.8 with
+SZ3 + sign safeguard), so the grid codecs win those variables.
 
 ## Repository layout
 
@@ -145,6 +158,10 @@ uv run python scripts/export_era5.py --pressure exploration/era5/log04.json expl
 | `configs/era5/` | Best codec config per ERA5 variable |
 | `scripts/export_era5.py` | Turns ERA5 sweep logs into configs, tables and expected ratios |
 | `verify_era5.py` | Rebuilds ERA5 codecs from `configs/era5/` and re-checks the safety requirements |
+| `scripts/throughput_era5.py` | Measures compress/decompress throughput per ERA5 variable |
+| `scripts/sheet_rows_era5.py` | Writes the leaderboard sheet rows, including the throughput columns |
+| `results/era5_throughput.csv` | Measured throughput for all 242 ERA5 variables |
+| `leaderboard/sheet/` | Tab-separated rows ready to paste into each leaderboard sheet tab |
 
 ## Reproducibility notes
 
