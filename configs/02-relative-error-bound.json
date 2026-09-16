@@ -6,11 +6,21 @@
       "eb_ratio": 1.01,
       "eb_abs_marker": "$eb_abs",
       "log_codec": {
-        "id": "fixedscaleoffset",
-        "scale": 34.83384183097051,
-        "offset": 0,
-        "dtype": "<f8",
-        "astype": "<i2"
+        "id": "combinators.stack",
+        "codecs": [
+          {
+            "id": "fixedscaleoffset",
+            "scale": 34.83384183097051,
+            "offset": 0,
+            "dtype": "<f8",
+            "astype": "<i2"
+          },
+          {
+            "id": "bitmap-index",
+            "max_bitmaps": 1,
+            "cost_factor": 1
+          }
+        ]
       },
       "sign_codec": {
         "id": "zstd.rs",

@@ -1,0 +1,448 @@
+[
+ {
+  "name": "current: Round2+Tokenize+rawLZMA(lc4,pb0)",
+  "cr": 42.802,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 3.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+Shuffle+LZMA",
+  "cr": 47.23,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": null,
+     "cost_factor": 1
+    },
+    {
+     "id": "shuffle.typed-byte"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+LZMA",
+  "cr": 47.23,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 1.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": null,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+Delta(u1)+rawLZMA(lc4,pb0)",
+  "cr": 38.749,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 3.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "delta",
+     "dtype": "|u1",
+     "astype": "|u1"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BinaryDelta+LZMA",
+  "cr": 38.611,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 3.4,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "delta.binary"
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BZ2",
+  "cr": 42.579,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 0.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bz2",
+     "level": 9
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+Zstd22",
+  "cr": 40.093,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 5.7,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "zstd.rs",
+     "level": 22,
+     "_version": "0.1.0"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+BitmapIndex+LZMA (no tokenize)",
+  "cr": 38.682,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 3.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": null,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+rawLZMA(lc0,pb0)",
+  "cr": 42.613,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 5.2,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+rawLZMA(delta1,lc4,pb0)",
+  "cr": 38.749,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 5.1,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Mask+fill20+FSO(u1)+BitmapIndex+Shuffle+LZMA",
+  "cr": 41.637,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 1.8,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": 20.0
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.5,
+      "offset": 0,
+      "dtype": "<f4",
+      "astype": "|u1"
+     },
+     {
+      "id": "bitmap-index",
+      "max_bitmaps": null,
+      "cost_factor": 1
+     },
+     {
+      "id": "shuffle.typed-byte"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "name": "Mask+fill20+FSO(u1)+rawLZMA(delta1,lc4,pb0)",
+  "cr": 39.762,
+  "violations": 0.0,
+  "ok": true,
+  "sec": 5.4,
+  "config": {
+   "id": "mask.meta",
+   "mask": NaN,
+   "codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "replace.filter",
+      "replacements": {
+       "nan": 20.0
+      }
+     },
+     {
+      "id": "fixedscaleoffset",
+      "scale": 0.5,
+      "offset": 0,
+      "dtype": "<f4",
+      "astype": "|u1"
+     },
+     {
+      "id": "lzma",
+      "format": 3,
+      "check": -1,
+      "preset": null,
+      "filters": [
+       {
+        "id": 3,
+        "dist": 1
+       },
+       {
+        "id": 33,
+        "preset": 2147483657,
+        "lc": 4,
+        "lp": 0,
+        "pb": 0
+       }
+      ]
+     }
+    ]
+   },
+   "bitmap_codec": {
+    "id": "combinators.stack",
+    "codecs": [
+     {
+      "id": "packbits"
+     },
+     {
+      "id": "lzma",
+      "format": 1,
+      "check": -1,
+      "preset": 2147483657,
+      "filters": null
+     }
+    ]
+   }
+  }
+ }
+]

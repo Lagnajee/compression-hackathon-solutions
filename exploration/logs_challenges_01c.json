@@ -1,0 +1,743 @@
+[
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc0,lp0,pb0)",
+  "cr": 47.38,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc0,lp0,pb1)",
+  "cr": 47.331,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc0,lp0,pb2)",
+  "cr": 47.23,
+  "ok": true,
+  "sec": 1.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 2
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc0,lp1,pb0)",
+  "cr": 47.303,
+  "ok": true,
+  "sec": 1.7,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 1,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc1,lp0,pb0)",
+  "cr": 47.407,
+  "ok": true,
+  "sec": 2.1,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc1,lp0,pb1)",
+  "cr": 47.359,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 0,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc1,lp0,pb2)",
+  "cr": 47.263,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 0,
+       "pb": 2
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc1,lp1,pb0)",
+  "cr": 47.337,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc2,lp0,pb0)",
+  "cr": 47.401,
+  "ok": true,
+  "sec": 1.7,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 2,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc2,lp0,pb1)",
+  "cr": 47.35,
+  "ok": true,
+  "sec": 1.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 2,
+       "lp": 0,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc2,lp0,pb2)",
+  "cr": 47.225,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 2,
+       "lp": 0,
+       "pb": 2
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc2,lp1,pb0)",
+  "cr": 47.304,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 2,
+       "lp": 1,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc3,lp0,pb0)",
+  "cr": 47.412,
+  "ok": true,
+  "sec": 2.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc3,lp0,pb1)",
+  "cr": 47.361,
+  "ok": true,
+  "sec": 2.1,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc3,lp0,pb2)",
+  "cr": 47.236,
+  "ok": true,
+  "sec": 1.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 2
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc3,lp1,pb0)",
+  "cr": 47.289,
+  "ok": true,
+  "sec": 1.3,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 1,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc4,lp0,pb0)",
+  "cr": 47.44,
+  "ok": true,
+  "sec": 2.0,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc4,lp0,pb1)",
+  "cr": 47.416,
+  "ok": true,
+  "sec": 1.9,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "Round2+Tokenize+BitmapIndex+rawLZMA(lc4,lp0,pb2)",
+  "cr": 47.322,
+  "ok": true,
+  "sec": 1.5,
+  "config": {
+   "id": "combinators.framed",
+   "codecs": [
+    {
+     "id": "round.rs",
+     "precision": 2.0,
+     "_version": "1.0.0"
+    },
+    {
+     "id": "tokenize"
+    },
+    {
+     "id": "bitmap-index",
+     "max_bitmaps": 1,
+     "cost_factor": 1
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 2
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

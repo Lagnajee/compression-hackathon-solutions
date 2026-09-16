@@ -9,6 +9,7 @@ import lzma
 import numpy as np
 from numcodecs import LZMA, FixedScaleOffset
 from numcodecs.packbits import PackBits
+from numcodecs_bitmap_index import BitmapIndexCodec
 from numcodecs_combinators.framed import FramedCodecStack
 from numcodecs_combinators.stack import CodecStack
 from numcodecs_mask import MaskMetaCodec
@@ -36,13 +37,16 @@ def nan_missing_values() -> FramedCodecStack:
     Values are rounded to the nearest multiple of 2 in floating point (worst-case
     error exactly 1), which keeps NaNs as NaNs. The field then holds only ~40
     distinct values, so tokenization turns it into uint8 indices where NaN is
-    just another token. A single raw LZMA2 stream models values and missingness
-    jointly, which beats storing a separate NaN bitmap (x39.76) because the
-    satellite swath gaps are predictable from the neighbouring tokens.
+    just another token. A bitmap index then pulls the most frequent token (the
+    NaN gaps) out into a bitmap, and a raw LZMA2 stream codes the rest. This
+    beats storing a separate NaN bitmap up front (x39.76) and plain LZMA2 over
+    the tokens (x42.80), because the swath gaps are predictable from their
+    neighbours either way, but the bitmap keeps them out of the literal stream.
     """
     return FramedCodecStack(
         Round(precision=2.0),
         TokenizeCodec(),
+        BitmapIndexCodec(max_bitmaps=1, cost_factor=1),
         raw_lzma(delta=None, lc=4, lp=0, pb=0),
     )
 
@@ -65,15 +69,21 @@ def relative_error_bound() -> CodecStack:
 
     The pointwise-ratio meta-codec compresses log2|x| under the absolute bound
     log2(1.01). A fixed quantiser with a step just below 2*log2(1.01) turns the
-    logs into int16 bins, and LZMA2 with a 2-byte delta filter exploits the
-    spatial correlation between neighbouring bins.
+    logs into int16 bins, a bitmap index lifts out the most frequent bin, and
+    LZMA2 with a 2-byte delta filter exploits the spatial correlation between
+    neighbouring bins. Running SPERR or SZ3 inside the ratio codec is worse
+    here (x14-16): precipitation is noisy, so a looser setting breaks the bound
+    at 7-23% of points and the safeguard corrections cost more than they save.
     """
     step = 2 * np.log2(1.01) * 0.9999
     return CodecStack(
         PointwiseRatioErrorBoundedCodec(
             eb_ratio=1.01,
             eb_abs_marker="$eb_abs",
-            log_codec=FixedScaleOffset(offset=0, scale=1 / step, dtype="<f8", astype="<i2").get_config(),
+            log_codec=CodecStack(
+                FixedScaleOffset(offset=0, scale=1 / step, dtype="<f8", astype="<i2"),
+                BitmapIndexCodec(max_bitmaps=1, cost_factor=1),
+            ).get_config(),
             sign_codec=Zstd(level=19),
         ),
         raw_lzma(delta=2, lc=1, lp=1, pb=1),

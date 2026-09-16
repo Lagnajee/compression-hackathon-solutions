@@ -10,6 +10,11 @@
       "id": "tokenize"
     },
     {
+      "id": "bitmap-index",
+      "max_bitmaps": 1,
+      "cost_factor": 1
+    },
+    {
       "id": "lzma",
       "format": 3,
       "check": -1,

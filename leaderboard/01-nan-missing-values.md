@@ -9,12 +9,12 @@ Leaderboard: https://github.com/climet-eu/compression-lab-notebooks/issues/47
 |---|---|
 | Challenge | 01-nan-missing-values |
 | All Data | TRUE |
-| Compression Ratio | 42.802 |
+| Compression Ratio | 47.440 |
 | Author | @Lagnajee |
 | Version | compression-safeguards 1.0.0rc3 / numcodecs 0.15.1 |
 
 ## Codec configuration
 
 ```json
-{"id": "combinators.framed", "codecs": [{"id": "round.rs", "precision": 2.0, "_version": "1.0.0"}, {"id": "tokenize"}, {"id": "lzma", "format": 3, "check": -1, "preset": null, "filters": [{"id": 33, "preset": 2147483657, "lc": 4, "lp": 0, "pb": 0}]}]}
+{"id": "combinators.framed", "codecs": [{"id": "round.rs", "precision": 2.0, "_version": "1.0.0"}, {"id": "tokenize"}, {"id": "bitmap-index", "max_bitmaps": 1, "cost_factor": 1}, {"id": "lzma", "format": 3, "check": -1, "preset": null, "filters": [{"id": 33, "preset": 2147483657, "lc": 4, "lp": 0, "pb": 0}]}]}
 ```

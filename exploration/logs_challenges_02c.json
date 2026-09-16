@@ -1,0 +1,837 @@
+[
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=2,lc1,lp1,pb1)",
+  "cr": 19.071,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=2,lc0,lp1,pb1)",
+  "cr": 18.935,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=2,lc3,lp0,pb0)",
+  "cr": 18.727,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=2,lc4,lp0,pb0)",
+  "cr": 18.712,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=2,lc0,lp0,pb0)",
+  "cr": 18.612,
+  "ok": true,
+  "sec": 1.7,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=1,lc1,lp1,pb1)",
+  "cr": 13.996,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=1,lc0,lp1,pb1)",
+  "cr": 13.96,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=1,lc3,lp0,pb0)",
+  "cr": 14.046,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=1,lc4,lp0,pb0)",
+  "cr": 14.088,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=1,lc0,lp0,pb0)",
+  "cr": 13.948,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 1
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=None,lc1,lp1,pb1)",
+  "cr": 15.742,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=None,lc0,lp1,pb1)",
+  "cr": 15.722,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=None,lc3,lp0,pb0)",
+  "cr": 15.554,
+  "ok": true,
+  "sec": 1.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 3,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=None,lc4,lp0,pb0)",
+  "cr": 15.571,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 4,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "PwRatio(FSO+BitmapIndex)+rawLZMA(delta=None,lc0,lp0,pb0)",
+  "cr": 15.441,
+  "ok": true,
+  "sec": 1.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 0,
+       "lp": 0,
+       "pb": 0
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

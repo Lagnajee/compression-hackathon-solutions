@@ -1,0 +1,477 @@
+[
+ {
+  "name": "current: FSO -> outer rawLZMA(delta2)",
+  "cr": 19.059,
+  "ok": true,
+  "sec": 2.1,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "fixedscaleoffset",
+      "scale": 34.83384183097051,
+      "offset": 0,
+      "dtype": "<f8",
+      "astype": "<i2"
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Tokenize+BitmapIndex -> outer LZMA",
+  "cr": 14.631,
+  "ok": true,
+  "sec": 1.3,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "tokenize"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Tokenize+BitmapIndex -> outer rawLZMA(delta2)",
+  "cr": 13.711,
+  "ok": true,
+  "sec": 2.9,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "tokenize"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Tokenize -> outer rawLZMA(delta2)",
+  "cr": 13.713,
+  "ok": true,
+  "sec": 1.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "tokenize"
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+BitmapIndex -> outer rawLZMA(delta2)",
+  "cr": 19.071,
+  "ok": true,
+  "sec": 2.8,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 3,
+       "dist": 2
+      },
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Delta(i2) -> outer rawLZMA",
+  "cr": 18.573,
+  "ok": true,
+  "sec": 2.4,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "delta",
+        "dtype": "<i2",
+        "astype": "<i2"
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Delta(i2)+Tokenize+BitmapIndex -> outer LZMA",
+  "cr": 17.831,
+  "ok": true,
+  "sec": 1.6,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "delta",
+        "dtype": "<i2",
+        "astype": "<i2"
+       },
+       {
+        "id": "tokenize"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+Shuffle(2) -> outer rawLZMA",
+  "cr": 14.922,
+  "ok": true,
+  "sec": 1.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "shuffle.typed-byte"
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 3,
+     "check": -1,
+     "preset": null,
+     "filters": [
+      {
+       "id": 33,
+       "preset": 2147483657,
+       "lc": 1,
+       "lp": 1,
+       "pb": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "FSO+BinaryDelta+Tokenize+BitmapIndex -> outer LZMA",
+  "cr": 17.831,
+  "ok": true,
+  "sec": 2.2,
+  "config": {
+   "id": "combinators.stack",
+   "codecs": [
+    {
+     "id": "pw_ratio",
+     "eb_ratio": 1.01,
+     "eb_abs_marker": "$eb_abs",
+     "log_codec": {
+      "id": "combinators.stack",
+      "codecs": [
+       {
+        "id": "fixedscaleoffset",
+        "scale": 34.83384183097051,
+        "offset": 0,
+        "dtype": "<f8",
+        "astype": "<i2"
+       },
+       {
+        "id": "delta.binary"
+       },
+       {
+        "id": "tokenize"
+       },
+       {
+        "id": "bitmap-index",
+        "max_bitmaps": 1,
+        "cost_factor": 1
+       }
+      ]
+     },
+     "sign_codec": {
+      "id": "zstd.rs",
+      "level": 19,
+      "_version": "0.1.0"
+     }
+    },
+    {
+     "id": "lzma",
+     "format": 1,
+     "check": -1,
+     "preset": 2147483657,
+     "filters": null
+    }
+   ]
+  }
+ }
+]

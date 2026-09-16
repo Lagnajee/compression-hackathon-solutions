@@ -11,8 +11,8 @@ evaluation code, and every codec is rebuilt from its JSON config alone in CI.
 
 | WORK | Constraint | Notebook Baseline | **This Repository** |
 |:---|:---|---:|---:|
-| [01 — Missing Values](configs/01-nan-missing-values.json) | \|error\| ≤ 1 kg m⁻²; NaNs preserved | ZFP ×8.0<br>68.7% violations | **×42.80** |
-| [02 — Relative Error](configs/02-relative-error-bound.json) | \|error\| ≤ 1% of \|value\| | SZ3 ×142<br>93.5% violations | **×19.059** |
+| [01 — Missing Values](configs/01-nan-missing-values.json) | \|error\| ≤ 1 kg m⁻²; NaNs preserved | ZFP ×8.0<br>68.7% violations | **×47.44** |
+| [02 — Relative Error](configs/02-relative-error-bound.json) | \|error\| ≤ 1% of \|value\| | SZ3 ×142<br>93.5% violations | **×19.071** |
 | [03 — Spatial Gradient](configs/03-spatial-gradient.json) | \|error of ∂/∂lon\| ≤ 10⁻⁶ | SPERR ×1051<br>14.2% violations | **×83.876** |
 
 ![Challenge 03 result](results/figures/03-spatial-gradient.png)
@@ -28,28 +28,37 @@ uv run python solve.py             # rebuild codecs from source, rewrite configs
 
 ## How each solution works
 
-### 01 — Missing values (×42.80)
+### 01 — Missing values (×47.44)
 69% of the HOAPS water-vapour field is NaN, and the values are stored with
 0.01 precision. A pointwise bound of 1 allows snapping every value to the
 nearest multiple of 2, so the field collapses to ~40 distinct values.
 
 1. `Round(precision=2)` rounds in floating point (worst-case error exactly 1) and leaves NaNs untouched.
 2. `TokenizeCodec` maps the distinct values, NaN included, to uint8 indices.
-3. Raw LZMA2 (`lc=4`, `pb=0`, no delta filter) compresses values and missingness as one stream.
+3. `BitmapIndexCodec` lifts the most frequent token (the NaN gaps) into a bitmap.
+4. Raw LZMA2 (`lc=4`, `pb=0`, no delta filter) codes the remainder.
 
-Storing NaN as a token beats a separate NaN bitmap: the runner-up
-(`MaskMetaCodec` + step-2 integer grid + byte-delta LZMA2) reaches ×39.76, and
-restoring NaNs through safeguard corrections reaches only ×36.97. Every
-floating-point compressor tried is far behind: SZ3 (×17–30), SPERR (×20),
+Each step is worth measuring: tokens straight into raw LZMA2 give ×42.80, and
+the bitmap index adds the last 10%. Storing NaN as a token beats a separate NaN
+bitmap up front (`MaskMetaCodec` + step-2 integer grid + byte-delta LZMA2,
+×39.76), and restoring NaNs through safeguard corrections reaches only ×36.97.
+Every floating-point compressor tried is far behind: SZ3 (×17–30), SPERR (×20),
 EBCC (×21), LC (×21), BitRound+Zstd (×24), pcodec (×33).
 
-### 02 — Pointwise relative error (×19.06)
+### 02 — Pointwise relative error (×19.07)
 A 1% relative bound is an absolute bound of `log2(1.01)` on `log2|x|`.
 `PointwiseRatioErrorBoundedCodec` performs that transform and preserves zeros
 and signs. Instead of SZ3 inside it (×18.06 with the `lorenzo` predictor), a
-fixed quantiser with a step just below `2·log2(1.01)` stores int16 bins. LZMA2
-with a 2-byte delta filter (`lc=1, lp=1, pb=1`) then exploits neighbour
-correlation.
+fixed quantiser with a step just below `2·log2(1.01)` stores int16 bins, a
+bitmap index lifts out the most frequent bin, and LZMA2 with a 2-byte delta
+filter (`lc=1, lp=1, pb=1`) exploits neighbour correlation.
+
+This challenge resists the trick that works on ERA5: running SPERR or SZ3
+inside the ratio codec above the bound and repairing violations with a relative
+error-bound safeguard tops out at ×14–16, because precipitation is noisy enough
+that 1.4× the bound already breaks 7–23% of points, and the corrections cost
+more than the looser setting saves. Tokenising the log bins also backfires
+(×13.7): there are ~2,000 distinct bins, not 01's ~40 values.
 
 ### 03 — Spatial gradient (×83.88)
 The notebook's derivative divides by `(lon[i-5] - lon[i+5]) % 360`, which
@@ -62,7 +71,11 @@ The solution targets the check exactly as written:
 2. A `qoi_eb_stencil` safeguard encodes the exact QoI `(X[i-5] - X[i+5]) / 357.5` with periodic wrap and corrects the few points that would violate it.
 3. LZMA compresses the combined stream.
 
-Pointwise-bounded alternatives top out lower: SPERR `pwe` at ×81.2, SZ3 at ×61.6, quantise+LZMA at ×63.4.
+Pointwise-bounded alternatives top out lower: SPERR `pwe` at ×81.2, SZ3 at
+×61.6, quantise+LZMA at ×63.4. A sweep around the chosen step confirms it sits
+at the peak: 0.84× gives ×83.62 and 1.19× gives ×82.35, while SZ3 (×61.6), ZFP
+(×17.9), a rounding grid (×61.7) and LZMA-coded corrections (×79.5) under the
+same safeguard are all further behind.
 
 ## ERA5 challenges (04 pressure-level, 05 single-level)
 
@@ -160,6 +173,8 @@ SZ3 + sign safeguard), so the grid codecs win those variables.
 | `verify_era5.py` | Rebuilds ERA5 codecs from `configs/era5/` and re-checks the safety requirements |
 | `scripts/throughput_era5.py` | Measures compress/decompress throughput per ERA5 variable |
 | `scripts/sheet_rows_era5.py` | Writes the leaderboard sheet rows, including the throughput columns |
+| `scripts/sheet_rows_challenges.py` | Writes the NaN / PwRel / Gradient sheet rows |
+| `exploration/search_challenges.py` | Parameter search over codec families for challenges 01-03 |
 | `results/era5_throughput.csv` | Measured throughput for all 242 ERA5 variables |
 | `leaderboard/sheet/` | Tab-separated rows ready to paste into each leaderboard sheet tab |
 

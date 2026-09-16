@@ -2,6 +2,7 @@
 
 # importing these modules registers their codec ids with numcodecs, which is
 # needed to rebuild codecs from their JSON configs
+import numcodecs_bitmap_index  # noqa: F401
 import numcodecs_combinators.best  # noqa: F401
 import numcodecs_combinators.framed  # noqa: F401
 import numcodecs_combinators.stack  # noqa: F401
