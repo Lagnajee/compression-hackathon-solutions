@@ -1,0 +1,5 @@
+# machine: x86_64, 24 logical CPUs, python 3.14.7, single process, median of 3 runs after warm-up
+challenge,raw_bytes,compressed_bytes,encode_s,decode_s,compression_gb_per_s,decompression_gb_per_s
+01-nan-missing-values,25804800,543945,1.1367,0.1729,0.0227,0.14927
+02-relative-error-bound,16611840,871066,1.3346,0.0683,0.01245,0.24317
+03-spatial-gradient,16611840,198052,10.7173,0.1522,0.00155,0.10914
