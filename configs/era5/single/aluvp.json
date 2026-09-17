@@ -3,8 +3,8 @@
   "codecs": [
     {
       "id": "sperr.rs",
-      "mode": "q",
-      "q": 0.9870149282610824,
+      "mode": "pwe",
+      "pwe": 0.32,
       "_version": "0.2.0"
     },
     {

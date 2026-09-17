@@ -12,19 +12,19 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | 100u | FALSE | 19.289 | @Lagnajee | 8.404 | meanabs 0.01 SPERR q p=4.362 | [json](../configs/era5/single/100u.json) |
 | 100v | FALSE | 19.469 | @Lagnajee | 8.167 | meanabs 0.01 SPERR q p=4.362 | [json](../configs/era5/single/100v.json) |
 | 10fg | FALSE | 76.190 | @Lagnajee | 45.545 | meanabs 0.5 SZ3 abs p=1 | [json](../configs/era5/single/10fg.json) |
-| 10u | FALSE | 11798.182 | @Lagnajee | 42.526 | meanabs 0.5 SPERR q p=362 | [json](../configs/era5/single/10u.json) |
-| 10v | FALSE | 11536.000 | @Lagnajee | 41.287 | meanrel 0.5 (abs) SPERR pwe p=53.82 | [json](../configs/era5/single/10v.json) |
+| 10u | FALSE | 4862.951 | @Lagnajee | 42.526 | meanrel 0.5 (abs) SPERR pwe p=16 | [json](../configs/era5/single/10u.json) |
+| 10v | FALSE | 4504.295 | @Lagnajee | 41.287 | meanrel 0.5 (abs) SPERR pwe p=16 | [json](../configs/era5/single/10v.json) |
 | 2d | FALSE | 23.436 | @Lagnajee | 16.497 | pwabs 0.05 safeguarded SZ3 abs p=1 | [json](../configs/era5/single/2d.json) |
 | 2t | FALSE | 24.960 | @Lagnajee | 17.471 | pwabs 0.05 safeguarded SZ3 abs p=1 | [json](../configs/era5/single/2t.json) |
 | alnid | FALSE | 1773.254 | @Lagnajee | 86.423 | meanabs 0.01 SPERR q p=34.9 | [json](../configs/era5/single/alnid.json) |
 | alnip | FALSE | 2264.427 | @Lagnajee | 90.739 | meanabs 0.01 SPERR q p=38.05 | [json](../configs/era5/single/alnip.json) |
-| aluvd | FALSE | 10815.000 | @Lagnajee | 142.826 | meanabs 0.01 SPERR q p=98.7 | [json](../configs/era5/single/aluvd.json) |
-| aluvp | FALSE | 11163.871 | @Lagnajee | 143.22 | meanabs 0.01 SPERR q p=98.7 | [json](../configs/era5/single/aluvp.json) |
-| anor | FALSE | 191.257 | @Lagnajee | 44.269 | meanabs 0.1 SPERR q p=13.45 | [json](../configs/era5/single/anor.json) |
+| aluvd | FALSE | 6350.092 | @Lagnajee | 142.826 | meanabs 0.01 SPERR pwe p=32 | [json](../configs/era5/single/aluvd.json) |
+| aluvp | FALSE | 6529.811 | @Lagnajee | 143.22 | meanabs 0.01 SPERR pwe p=32 | [json](../configs/era5/single/aluvp.json) |
+| anor | FALSE | 170.427 | @Lagnajee | 44.269 | meanrel 0.01 (abs) SPERR pwe p=117.4 | [json](../configs/era5/single/anor.json) |
 | asn | FALSE | 1677.286 | @Lagnajee | 578.568 | meanrel 0.001 (abs) SPERR q p=83 | [json](../configs/era5/single/asn.json) |
 | avg_cpr | FALSE | 31.259 | @Lagnajee | 18.149 | meanrel 0.01 (abs) grid p=5.187 | [json](../configs/era5/single/avg_cpr.json) |
 | avg_csfr | FALSE | 398.671 | @Lagnajee | 226.628 | meanrel 0.01 (abs) grid p=76.11 | [json](../configs/era5/single/avg_csfr.json) |
-| avg_esrwe | FALSE | 33091.315 | @Lagnajee | 100.453 | absq meanabs 1e-07 eb=256.0v | [json](../configs/era5/single/avg_esrwe.json) |
+| avg_esrwe | FALSE | 3208.158 | @Lagnajee | 100.453 | absq meanabs 1e-07 eb=16v | [json](../configs/era5/single/avg_esrwe.json) |
 | avg_ibld | FALSE | 120.418 | @Lagnajee | 22.564 | meanabs 0.1 SPERR q p=9.514 | [json](../configs/era5/single/avg_ibld.json) |
 | avg_ie | FALSE | 36.187 | @Lagnajee | 11.78 | meanrel 0.01 (abs) SPERR q p=5.657 | [json](../configs/era5/single/avg_ie.json) |
 | avg_iegwss | FALSE | 64.850 | @Lagnajee | 45.674 | meanrel 0.01 (abs) grid p=8.724 | [json](../configs/era5/single/avg_iegwss.json) |
@@ -46,13 +46,13 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | avg_sdswrfcs | FALSE | 62.684 | @Lagnajee | 23.852 | meanabs 0.1 grid p=3.668 | [json](../configs/era5/single/avg_sdswrfcs.json) |
 | avg_sduvrf | FALSE | 65.101 | @Lagnajee | 21.65 | absq meanabs 0.1 eb=5.6v | [json](../configs/era5/single/avg_sduvrf.json) |
 | avg_slhtf | FALSE | 14.911 | @Lagnajee | 8.053 | meanabs 0.1 SPERR q p=4.362 | [json](../configs/era5/single/avg_slhtf.json) |
-| avg_smr | FALSE | 21351.979 | @Lagnajee | 664.42 | absq meanabs 1e-06 eb=256.0v | [json](../configs/era5/single/avg_smr.json) |
+| avg_smr | FALSE | 3498.703 | @Lagnajee | 664.42 | absq meanabs 1e-06 eb=16v | [json](../configs/era5/single/avg_smr.json) |
 | avg_snlwrf | FALSE | 17.966 | @Lagnajee | 8.872 | meanabs 0.1 SPERR q p=4.362 | [json](../configs/era5/single/avg_snlwrf.json) |
 | avg_snlwrfcs | FALSE | 42.572 | @Lagnajee | 12.839 | meanabs 0.1 SPERR q p=5.657 | [json](../configs/era5/single/avg_snlwrfcs.json) |
 | avg_snswrf | FALSE | 34.197 | @Lagnajee | 13.961 | meanabs 0.1 SPERR q p=8.724 | [json](../configs/era5/single/avg_snswrf.json) |
 | avg_snswrfcs | FALSE | 44.497 | @Lagnajee | 19.739 | meanabs 0.1 grid p=3.668 | [json](../configs/era5/single/avg_snswrfcs.json) |
-| avg_ssurfror | FALSE | 1986.112 | @Lagnajee | 49.435 | absq meanabs 1e-06 eb=45.0v | [json](../configs/era5/single/avg_ssurfror.json) |
-| avg_surfror | FALSE | 7442.581 | @Lagnajee | 125.261 | absq meanabs 1e-06 eb=256.0v | [json](../configs/era5/single/avg_surfror.json) |
+| avg_ssurfror | FALSE | 802.892 | @Lagnajee | 49.435 | absq meanabs 1e-06 eb=16v | [json](../configs/era5/single/avg_ssurfror.json) |
+| avg_surfror | FALSE | 1178.981 | @Lagnajee | 125.261 | absq meanabs 1e-06 eb=16v | [json](../configs/era5/single/avg_surfror.json) |
 | avg_tdswrf | FALSE | 144.564 | @Lagnajee | 43.897 | meanabs 0.1 grid p=3.668 | [json](../configs/era5/single/avg_tdswrf.json) |
 | avg_tnlwrf | FALSE | 24.320 | @Lagnajee | 10.545 | meanabs 0.1 SPERR q p=4.757 | [json](../configs/era5/single/avg_tnlwrf.json) |
 | avg_tnlwrfcs | FALSE | 81.841 | @Lagnajee | 16.761 | meanabs 0.1 SPERR pwe p=5.187 | [json](../configs/era5/single/avg_tnlwrfcs.json) |
@@ -69,12 +69,12 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | cdir | FALSE | 146.185 | @Lagnajee | 55.107 | absq meanabs 3600 eb=2.8v | [json](../configs/era5/single/cdir.json) |
 | cdww | FALSE | 34.159 | @Lagnajee | 7.188 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/cdww.json) |
 | chnk | FALSE | 52.210 | @Lagnajee | 30.891 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/chnk.json) |
-| ci | FALSE | 667.786 | @Lagnajee | 299.011 | absq meanabs 0.05 eb=8v | [json](../configs/era5/single/ci.json) |
+| ci | FALSE | 299.011 | @Lagnajee | 299.011 | Safeguarded(Zero) | [json](../configs/era5/single/ci.json) |
 | cin | FALSE | 53.901 | @Lagnajee | 44.145 | absq meanabs 1 eb=2v | [json](../configs/era5/single/cin.json) |
 | cl | FALSE | 60.945 | @Lagnajee | 25.086 | absq meanrel 0.01 eb=11v*mean|x| | [json](../configs/era5/single/cl.json) |
 | cp | FALSE | 141.655 | @Lagnajee | 34.535 | absq meanabs 1e-05 eb=8v | [json](../configs/era5/single/cp.json) |
 | crr | FALSE | 34.228 | @Lagnajee | 22.816 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/crr.json) |
-| csf | FALSE | 35194.576 | @Lagnajee | 541.844 | absq meanabs 1e-05 eb=256.0v | [json](../configs/era5/single/csf.json) |
+| csf | FALSE | 541.844 | @Lagnajee | 541.844 | Safeguarded(Zero) | [json](../configs/era5/single/csf.json) |
 | csfr | FALSE | 355.121 | @Lagnajee | 288.29 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/csfr.json) |
 | cvh | FALSE | 95.230 | @Lagnajee | 26.389 | absq meanrel 0.01 eb=8v*mean|x| | [json](../configs/era5/single/cvh.json) |
 | cvl | FALSE | 89.892 | @Lagnajee | 22.057 | absq meanrel 0.01 eb=11v*mean|x| | [json](../configs/era5/single/cvl.json) |
@@ -87,13 +87,13 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | dwps | FALSE | 43.685 | @Lagnajee | 29.903 | absq meanabs 0.01 eb=1.4v | [json](../configs/era5/single/dwps.json) |
 | dwww | FALSE | 30.908 | @Lagnajee | 25.461 | absq meanabs 0.01 eb=1.4v | [json](../configs/era5/single/dwww.json) |
 | e | FALSE | 23.308 | @Lagnajee | 11.711 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/e.json) |
-| es | FALSE | 35194.576 | @Lagnajee | 3551.056 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/es.json) |
+| es | FALSE | 717.264 | @Lagnajee | 3551.056 | absq meanrel 0.01 eb=256.0v*mean|x| | [json](../configs/era5/single/es.json) |
 | ewss | FALSE | 112.809 | @Lagnajee | 41.593 | absq meanabs 100 eb=2v | [json](../configs/era5/single/ewss.json) |
 | fal | FALSE | 181.932 | @Lagnajee | 80.524 | absq meanabs 0.01 eb=2.8v | [json](../configs/era5/single/fal.json) |
 | fdir | FALSE | 60.336 | @Lagnajee | 24.156 | absq meanabs 3600 eb=4v | [json](../configs/era5/single/fdir.json) |
 | flsr | FALSE | 50.481 | @Lagnajee | 26.958 | absq meanrel 0.01 eb=1.4v*mean|x| | [json](../configs/era5/single/flsr.json) |
 | fsr | FALSE | 60.107 | @Lagnajee | 14.443 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/fsr.json) |
-| gwd | FALSE | 1916.456 | @Lagnajee | 230.4 | absq meanabs 1000 eb=16v | [json](../configs/era5/single/gwd.json) |
+| gwd | FALSE | 230.400 | @Lagnajee | 230.4 | Safeguarded(Zero) | [json](../configs/era5/single/gwd.json) |
 | hcc | FALSE | 31.753 | @Lagnajee | 18.226 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/hcc.json) |
 | hmax | FALSE | 30.830 | @Lagnajee | 18.472 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/hmax.json) |
 | i10fg | FALSE | 11.452 | @Lagnajee | 8.969 | absq meanabs 0.01 eb=1.4v | [json](../configs/era5/single/i10fg.json) |
@@ -102,22 +102,22 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | ilspf | FALSE | 27.071 | @Lagnajee | 15.703 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/ilspf.json) |
 | inss | FALSE | 21.111 | @Lagnajee | 10.584 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/inss.json) |
 | ishf | FALSE | 12.476 | @Lagnajee | 8.366 | absq meanabs 0.1 eb=1.4v | [json](../configs/era5/single/ishf.json) |
-| isor | FALSE | 300.275 | @Lagnajee | 57.747 | absq meanabs 0.05 eb=5.6v | [json](../configs/era5/single/isor.json) |
-| istl1 | FALSE | 5772.008 | @Lagnajee | 1807.206 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/istl1.json) |
-| istl2 | FALSE | 6071.579 | @Lagnajee | 2021.889 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/istl2.json) |
-| istl3 | FALSE | 7821.017 | @Lagnajee | 2909.254 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/istl3.json) |
-| istl4 | FALSE | 34898.824 | @Lagnajee | 4979.568 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/istl4.json) |
+| isor | FALSE | 57.747 | @Lagnajee | 57.747 | Safeguarded(Zero) | [json](../configs/era5/single/isor.json) |
+| istl1 | FALSE | 1807.206 | @Lagnajee | 1807.206 | Safeguarded(Zero) | [json](../configs/era5/single/istl1.json) |
+| istl2 | FALSE | 2021.889 | @Lagnajee | 2021.889 | Safeguarded(Zero) | [json](../configs/era5/single/istl2.json) |
+| istl3 | FALSE | 2909.254 | @Lagnajee | 2909.254 | Safeguarded(Zero) | [json](../configs/era5/single/istl3.json) |
+| istl4 | FALSE | 484.678 | @Lagnajee | 4979.568 | absq meanabs 0.002 eb=16v | [json](../configs/era5/single/istl4.json) |
 | kx | FALSE | 18.969 | @Lagnajee | 11.584 | absq meanabs 0.1 eb=1.4v | [json](../configs/era5/single/kx.json) |
 | lai_hv | FALSE | 80.123 | @Lagnajee | 20.854 | absq meanrel 0.01 eb=11v*mean|x| | [json](../configs/era5/single/lai_hv.json) |
 | lai_lv | FALSE | 64.556 | @Lagnajee | 18.464 | absq meanrel 0.01 eb=8v*mean|x| | [json](../configs/era5/single/lai_lv.json) |
 | lblt | FALSE | 337.283 | @Lagnajee | 140.379 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/lblt.json) |
 | lcc | FALSE | 23.573 | @Lagnajee | 12.873 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/lcc.json) |
-| lgws | FALSE | 34040.656 | @Lagnajee | 177.572 | absq meanabs 100 eb=256.0v | [json](../configs/era5/single/lgws.json) |
+| lgws | FALSE | 177.572 | @Lagnajee | 177.572 | Safeguarded(Zero) | [json](../configs/era5/single/lgws.json) |
 | licd | FALSE | 530.967 | @Lagnajee | 148.718 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/licd.json) |
 | lict | FALSE | 1666.851 | @Lagnajee | 935.878 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/lict.json) |
 | lmld | FALSE | 63.053 | @Lagnajee | 25.512 | absq meanabs 0.1 eb=5.6v | [json](../configs/era5/single/lmld.json) |
 | lmlt | FALSE | 483.943 | @Lagnajee | 165.447 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/lmlt.json) |
-| lsf | FALSE | 7550.836 | @Lagnajee | 208.075 | absq meanabs 1e-05 eb=64.0v | [json](../configs/era5/single/lsf.json) |
+| lsf | FALSE | 2172.618 | @Lagnajee | 208.075 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/lsf.json) |
 | lshf | FALSE | 138.529 | @Lagnajee | 105.767 | absq meanrel 0.01 eb=1.4v*mean|x| | [json](../configs/era5/single/lshf.json) |
 | lsm | FALSE | 12.112 | @Lagnajee | 9.435 | lossless LZMA | [json](../configs/era5/single/lsm.json) |
 | lsp | FALSE | 158.308 | @Lagnajee | 36.135 | absq meanabs 1e-05 eb=5.6v | [json](../configs/era5/single/lsp.json) |
@@ -128,7 +128,7 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | mcc | FALSE | 27.752 | @Lagnajee | 14.055 | absq meanrel 0.01 eb=2.8v*mean|x| | [json](../configs/era5/single/mcc.json) |
 | mdts | FALSE | 17.896 | @Lagnajee | 13.009 | absq meanabs 0.1 eb=1.4v | [json](../configs/era5/single/mdts.json) |
 | mdww | FALSE | 17.216 | @Lagnajee | 11.858 | absq meanabs 0.1 eb=2v | [json](../configs/era5/single/mdww.json) |
-| mgws | FALSE | 30536.471 | @Lagnajee | 184.273 | absq meanabs 100 eb=256.0v | [json](../configs/era5/single/mgws.json) |
+| mgws | FALSE | 184.273 | @Lagnajee | 184.273 | Safeguarded(Zero) | [json](../configs/era5/single/mgws.json) |
 | mn2t | FALSE | 21.572 | @Lagnajee | 17.491 | absq pointwise 0.05 | [json](../configs/era5/single/mn2t.json) |
 | mntpr | FALSE | 28.931 | @Lagnajee | 17.907 | absq meanrel 0.01 eb=2.8v*mean|x| | [json](../configs/era5/single/mntpr.json) |
 | mp1 | FALSE | 28.034 | @Lagnajee | 17.972 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/mp1.json) |
@@ -158,21 +158,21 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | pp1d | FALSE | 28.937 | @Lagnajee | 18.433 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/pp1d.json) |
 | ptype | FALSE | 178.445 | @Lagnajee | 167.691 | lossless int8 grid + LZMA | [json](../configs/era5/single/ptype.json) |
 | rhoao | FALSE | 178.379 | @Lagnajee | 9.748 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/rhoao.json) |
-| ro | FALSE | 14546.270 | @Lagnajee | 46.64 | absq meanabs 1e-05 eb=256.0v | [json](../configs/era5/single/ro.json) |
+| ro | FALSE | 1171.498 | @Lagnajee | 46.64 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/ro.json) |
 | rsn | FALSE | 702.047 | @Lagnajee | 581.037 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/rsn.json) |
 | sd | FALSE | 1325.131 | @Lagnajee | 180.941 | absq meanrel 0.01 eb=16v*mean|x| | [json](../configs/era5/single/sd.json) |
 | sdfor | FALSE | 45.064 | @Lagnajee | 39.215 | relq pointwise 0.05 | [json](../configs/era5/single/sdfor.json) |
 | sdor | FALSE | 78.288 | @Lagnajee | 24.638 | absq meanabs 1 eb=5.6v | [json](../configs/era5/single/sdor.json) |
-| sf | FALSE | 4002.853 | @Lagnajee | 174.19 | absq meanabs 1e-05 eb=45.0v | [json](../configs/era5/single/sf.json) |
+| sf | FALSE | 1611.548 | @Lagnajee | 174.19 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/sf.json) |
 | shts | FALSE | 32.008 | @Lagnajee | 21.966 | absq meanabs 0.01 eb=1.4v | [json](../configs/era5/single/shts.json) |
 | shww | FALSE | 28.900 | @Lagnajee | 16.633 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/shww.json) |
 | skt | FALSE | 19.575 | @Lagnajee | 16.203 | absq pointwise 0.05 | [json](../configs/era5/single/skt.json) |
 | slhf | FALSE | 16.677 | @Lagnajee | 10.519 | absq meanabs 1000 eb=2v | [json](../configs/era5/single/slhf.json) |
 | slor | FALSE | 35.891 | @Lagnajee | 26.505 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/slor.json) |
 | slt | FALSE | 248.101 | @Lagnajee | 212.281 | lossless int8 grid + LZMA | [json](../configs/era5/single/slt.json) |
-| smlt | FALSE | 35194.576 | @Lagnajee | 673.144 | absq meanabs 1e-05 eb=256.0v | [json](../configs/era5/single/smlt.json) |
+| smlt | FALSE | 5732.174 | @Lagnajee | 673.144 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/smlt.json) |
 | sp | FALSE | 201.390 | @Lagnajee | 102.818 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/sp.json) |
-| src | FALSE | 563.190 | @Lagnajee | 39.19 | absq meanabs 1e-05 eb=16v | [json](../configs/era5/single/src.json) |
+| src | FALSE | 299.237 | @Lagnajee | 39.19 | absq meanrel 0.01 eb=256.0v*mean|x| | [json](../configs/era5/single/src.json) |
 | sro | FALSE | 210.885 | @Lagnajee | 126.903 | absq meanrel 0.01 eb=32.0v*mean|x| | [json](../configs/era5/single/sro.json) |
 | sshf | FALSE | 18.944 | @Lagnajee | 11.258 | absq meanabs 1000 eb=2v | [json](../configs/era5/single/sshf.json) |
 | ssr | FALSE | 49.292 | @Lagnajee | 25.068 | absq meanabs 3600 eb=2.8v | [json](../configs/era5/single/ssr.json) |
@@ -199,10 +199,10 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | swvl4 | FALSE | 62.323 | @Lagnajee | 14.819 | absq meanrel 0.01 eb=5.6v*mean|x| | [json](../configs/era5/single/swvl4.json) |
 | tauoc | FALSE | 55.781 | @Lagnajee | 9.569 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/tauoc.json) |
 | tcc | FALSE | 72.328 | @Lagnajee | 31.789 | absq meanabs 0.05 eb=2v | [json](../configs/era5/single/tcc.json) |
-| tciw | FALSE | 356.661 | @Lagnajee | 63.3 | absq meanabs 0.01 eb=5.6v | [json](../configs/era5/single/tciw.json) |
+| tciw | FALSE | 63.300 | @Lagnajee | 63.3 | Safeguarded(Zero) | [json](../configs/era5/single/tciw.json) |
 | tclw | FALSE | 86.836 | @Lagnajee | 32.86 | absq meanabs 0.01 eb=2.8v | [json](../configs/era5/single/tclw.json) |
 | tco3 | FALSE | 250.896 | @Lagnajee | 114.331 | absq meanrel 0.01 eb=2v*mean|x| | [json](../configs/era5/single/tco3.json) |
-| tcrw | FALSE | 15129.180 | @Lagnajee | 82.235 | absq meanabs 0.01 eb=256.0v | [json](../configs/era5/single/tcrw.json) |
+| tcrw | FALSE | 1433.291 | @Lagnajee | 82.235 | absq meanabs 0.01 eb=16v | [json](../configs/era5/single/tcrw.json) |
 | tcslw | FALSE | 189.438 | @Lagnajee | 51.783 | absq meanabs 0.01 eb=4v | [json](../configs/era5/single/tcslw.json) |
 | tcsw | FALSE | 282.485 | @Lagnajee | 53.052 | absq meanabs 0.01 eb=8v | [json](../configs/era5/single/tcsw.json) |
 | tcw | FALSE | 28.919 | @Lagnajee | 18.004 | absq meanabs 0.1 eb=1.4v | [json](../configs/era5/single/tcw.json) |
@@ -229,7 +229,7 @@ Each row passes `check_safety_requirements` for the one-timestep test subset use
 | wdw | FALSE | 59.900 | @Lagnajee | 43.771 | absq meanabs 0.01 eb=1.4v | [json](../configs/era5/single/wdw.json) |
 | wind | FALSE | 16.412 | @Lagnajee | 12.491 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/wind.json) |
 | wmb | FALSE | 42.034 | @Lagnajee | 38.391 | absq meanabs 0.1 eb=2.8v | [json](../configs/era5/single/wmb.json) |
-| wsk | FALSE | 275.521 | @Lagnajee | 107.862 | absq meanabs 0.01 eb=2.8v | [json](../configs/era5/single/wsk.json) |
+| wsk | FALSE | 65.325 | @Lagnajee | 107.862 | absq meanrel 0.01 eb=16v*mean|x| | [json](../configs/era5/single/wsk.json) |
 | wsp | FALSE | 34.923 | @Lagnajee | 17.883 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/wsp.json) |
 | wss | FALSE | 40.052 | @Lagnajee | 11.314 | relq meanrel 0.01 ratio=1+1.9v | [json](../configs/era5/single/wss.json) |
 | wstar | FALSE | 33.782 | @Lagnajee | 20.713 | absq meanabs 0.01 eb=2v | [json](../configs/era5/single/wstar.json) |

@@ -3,10 +3,10 @@
   "codecs": [
     {
       "id": "fixedscaleoffset",
-      "scale": 0.03291521199872345,
+      "scale": 15.626562656265627,
       "offset": 0,
       "dtype": "<f8",
-      "astype": "|i1"
+      "astype": "<i2"
     },
     {
       "id": "lzma",
@@ -16,7 +16,7 @@
       "filters": [
         {
           "id": 3,
-          "dist": 1
+          "dist": 2
         },
         {
           "id": 33,

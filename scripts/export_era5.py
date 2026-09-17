@@ -53,6 +53,16 @@ def export(leveltype: str, rows: list[dict], expected: dict) -> list[dict]:
             except Exception:  # noqa: BLE001
                 entry["requirements"] = ""
 
+    # Fidelity overrides: some requirements are loose enough that the
+    # highest-ratio passing codec flattens the field. exploration/era5/
+    # pick_fidelity.py re-picks those, and its choice wins here.
+    fidelity_path = ROOT / "exploration" / "era5" / "fidelity_choice.json"
+    if leveltype == "single" and fidelity_path.exists():
+        for choice in json.loads(fidelity_path.read_text()):
+            entry = by_var.get(choice["var"])
+            if entry is not None and choice.get("cr"):
+                entry["best"] = {"cr": choice["cr"], "codec": choice["codec"], "config": choice["config"], "ok": True}
+
     config_dir = ROOT / "configs" / "era5" / leveltype
     config_dir.mkdir(parents=True, exist_ok=True)
     summary = []

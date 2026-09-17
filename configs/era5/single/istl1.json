@@ -1,31 +1,110 @@
 {
-  "id": "combinators.framed",
-  "codecs": [
+  "id": "safeguards",
+  "codec": {
+    "id": "zero"
+  },
+  "safeguards": [
     {
-      "id": "fixedscaleoffset",
-      "scale": 0.03296575268862044,
-      "offset": 0,
-      "dtype": "<f8",
-      "astype": "|i1"
-    },
-    {
-      "id": "lzma",
-      "format": 3,
-      "check": -1,
-      "preset": null,
-      "filters": [
+      "kind": "any",
+      "safeguards": [
         {
-          "id": 3,
-          "dist": 1
+          "kind": "all",
+          "safeguards": [
+            {
+              "kind": "everywhere",
+              "safeguard": {
+                "kind": "eb",
+                "type": "abs",
+                "eb": 0.002,
+                "equal_nan": false
+              }
+            }
+          ]
         },
         {
-          "id": 33,
-          "preset": 2147483657,
-          "lc": 1,
-          "lp": 1,
-          "pb": 1
+          "kind": "all",
+          "safeguards": [
+            {
+              "kind": "everywhere",
+              "safeguard": {
+                "kind": "eb",
+                "type": "rel",
+                "eb": 0.01,
+                "equal_nan": false
+              }
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "fixed_constants": {},
+  "lossless": {
+    "for_codec": null,
+    "for_corrections": {
+      "id": "combinators.best",
+      "codecs": [
+        {
+          "id": "combinators.stack",
+          "codecs": [
+            {
+              "id": "tokenize"
+            },
+            {
+              "id": "bitmap-index",
+              "max_bitmaps": 1,
+              "cost_factor": 1
+            },
+            {
+              "id": "shuffle.typed-byte"
+            },
+            {
+              "id": "combinators.framed",
+              "codecs": [
+                {
+                  "id": "zstd",
+                  "level": 3,
+                  "checksum": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "combinators.stack",
+          "codecs": [
+            {
+              "id": "delta.binary"
+            },
+            {
+              "id": "tokenize"
+            },
+            {
+              "id": "bitmap-index",
+              "max_bitmaps": 1,
+              "cost_factor": 1
+            },
+            {
+              "id": "shuffle.typed-byte"
+            },
+            {
+              "id": "combinators.framed",
+              "codecs": [
+                {
+                  "id": "zstd",
+                  "level": 3,
+                  "checksum": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "compute": {
+    "unstable_iterative": false,
+    "unstable_lossless_corrections": false
+  },
+  "_version": "1.0.0"
 }

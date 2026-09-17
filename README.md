@@ -98,23 +98,44 @@ recommendation yet, so they cannot be scored.
 | Variables passing their requirements | 16 / 16 | 226 / 226 |
 | Median compression ratio | ×55.7 | ×50.8 |
 | Median of the `Safeguarded(Zero)` baseline | ×46.1 | ×22.9 |
-| Median gain over the baseline | ×1.35 | ×2.00 |
-| Variables at least 2× better than the baseline | 4 | 113 |
-| Winning codec families | SPERR 9, log-ratio grid 5, safeguard-only 2 | grid 180, SPERR 23, log-ratio grid 13, lossless 5, SZ3 4, safeguard-only 1 |
-| Median throughput (this machine, 4 workers) | 0.012 GB/s compress, 0.086 GB/s decompress | 0.016 GB/s compress, 0.525 GB/s decompress |
+| Median gain over the baseline | ×1.35 | ×1.85 |
+| Variables at least 2× better than the baseline | 4 | 100 |
+| Winning codec families | SPERR 9, log-ratio grid 5, safeguard-only 2 | grid 170, SPERR 23, log-ratio grid 13, safeguard-only 11, lossless 5, SZ3 4 |
+| Median throughput (this machine, 4 workers) | 0.008 GB/s compress, 0.074 GB/s decompress | 0.015 GB/s compress, 0.506 GB/s decompress |
+| Median error relative to the field's own spread | 0.6% | 0.8% |
 
-Highlights: `t` ×787.7, `v` ×135.9, `z` ×132.2, `u` ×131.9 (pressure-level).
-The weakest are relative-bound fields such as `d` ×13.5 and mean-absolute-bound
-single-level fields such as `dl` ×8.1.
+Highlights: `t` ×787.7, `v` ×135.9, `z` ×132.2, `u` ×131.9 (pressure-level);
+`aluvp` ×6,530, `aluvd` ×6,350, `smlt` ×5,732 (single-level). The weakest are
+relative-bound fields such as `d` ×13.5 and mean-absolute-bound single-level
+fields such as `dl` ×8.1.
 
-**Caveat on the largest single-level ratios.** 27 variables exceed ×1,000 and
-seven of them (`avg_esrwe`, `csf`, `es`, `istl4`, `lgws`, `mgws`, `smlt`)
-exceed ×30,000, because the field collapses to an almost constant grid while
-still meeting a mean error bound that is large compared to the field itself.
-These entries are valid under the published requirements, but they reflect how
-loose those requirements are rather than compressor quality. They are good
-candidates for an issue or pull request against `compression-recommendations`,
-as the challenge notebooks suggest.
+### Fidelity filter
+
+For some variables the published mean-error bound is larger than the field's own
+variability, so the highest-ratio *passing* codec simply flattens the field:
+`csf`, `es` and `smlt` reached ×35,194 by reconstructing a single constant
+value, and `istl4` ×34,899 with an error 2.3× the field's spread. Those entries
+satisfy `check_safety_requirements` but say nothing about compression.
+
+`scripts/fidelity_era5.py` therefore records, for every exported codec, the RMSE
+relative to `std(original)` and how many distinct values survive
+([`results/era5_fidelity.csv`](results/era5_fidelity.csv)).
+`exploration/era5/pick_fidelity.py` re-picks any variable whose reconstruction
+fails
+
+    RMSE <= 0.30 * std(original)   and   > 3 distinct values
+
+taking the highest-ratio logged candidate that passes both that test and the
+official checks; `scripts/export_era5.py` honours those choices so a re-export
+cannot reinstate a flattened field. 28 of the 226 single-level variables were
+re-picked this way (`csf` ×35,194 → ×542, `istl4` ×34,899 → ×485,
+`10u` ×11,798 → ×4,863). After filtering, every variable at both levels has an
+error of at most 30% of its field's spread, with a median of 0.8%.
+
+20 single-level variables still exceed ×1,000. Those are faithful
+reconstructions of fields that are genuinely near-constant or strongly
+quantised, but the loose bounds remain worth an issue or pull request against
+`compression-recommendations`, as the challenge notebooks suggest.
 
 ### Approach
 
@@ -170,6 +191,9 @@ SZ3 + sign safeguard), so the grid codecs win those variables.
 | `exploration/` | The sweep scripts that produced those logs (`exploration/era5/` for 04/05) |
 | `configs/era5/` | Best codec config per ERA5 variable |
 | `scripts/export_era5.py` | Turns ERA5 sweep logs into configs, tables and expected ratios |
+| `scripts/fidelity_era5.py` | Records reconstruction error and surviving detail per ERA5 variable |
+| `scripts/apply_fidelity_choice.py` | Applies the re-picked, fidelity-filtered codecs |
+| `exploration/era5/pick_fidelity.py` | Re-picks codecs that pass the checks only by flattening the field |
 | `verify_era5.py` | Rebuilds ERA5 codecs from `configs/era5/` and re-checks the safety requirements |
 | `scripts/throughput_era5.py` | Measures compress/decompress throughput per ERA5 variable |
 | `scripts/sheet_rows_era5.py` | Writes the leaderboard sheet rows, including the throughput columns |
